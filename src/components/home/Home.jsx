@@ -1,10 +1,12 @@
 /* eslint-disable react/no-unescaped-entities */
 
+import SwiperHero from "../swiper/SwiperHero";
+
 
 const Home = () => {
     return (
         <div className="">
-           <h1>This is home</h1>
+           <SwiperHero></SwiperHero>
         </div>
     );
 };
