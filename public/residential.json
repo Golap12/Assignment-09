@@ -1,0 +1,111 @@
+[
+    {
+      "image": "image_url1.jpg",
+      "estate_title": "Luxury Villa with Ocean View",
+      "id": 1,
+      "segment_name": "Villa",
+      "description": "A stunning villa overlooking the ocean, featuring modern amenities and breathtaking views.",
+      "price": "$2,500,000",
+      "status": "sale",
+      "area": "5000 sq ft",
+      "location": "Coastal City, XYZ",
+      "facilities": ["swimming pool", "garden", "home theater"]
+    },
+    {
+      "image": "image_url2.jpg",
+      "estate_title": "Spacious Family Home",
+      "id": 2,
+      "segment_name": "House",
+      "description": "A spacious family home with multiple bedrooms, a large backyard, and a modern kitchen.",
+      "price": "$600,000",
+      "status": "sale",
+      "area": "3000 sq ft",
+      "location": "Suburban Area, ABC",
+      "facilities": ["living room", "backyard", "garage"]
+    },
+    {
+      "image": "image_url3.jpg",
+      "estate_title": "Cozy Apartment in Downtown",
+      "id": 3,
+      "segment_name": "Apartment",
+      "description": "A cozy apartment located in the heart of downtown, offering easy access to amenities and city life.",
+      "price": "$1,200/month",
+      "status": "rent",
+      "area": "800 sq ft",
+      "location": "Downtown, PQR",
+      "facilities": ["balcony", "gym", "security"]
+    },
+    {
+      "image": "image_url4.jpg",
+      "estate_title": "Modern Townhouse",
+      "id": 4,
+      "segment_name": "Townhouse",
+      "description": "A modern townhouse with sleek design and convenient access to urban conveniences.",
+      "price": "$800,000",
+      "status": "sale",
+      "area": "2500 sq ft",
+      "location": "Urban Area, LMN",
+      "facilities": ["kitchen", "rooftop terrace", "parking"]
+    },
+    {
+      "image": "image_url5.jpg",
+      "estate_title": "Riverside Mansion",
+      "id": 5,
+      "segment_name": "Mansion",
+      "description": "A grand mansion situated by the river, offering luxury living with spacious rooms and beautiful surroundings.",
+      "price": "$5,000,000",
+      "status": "sale",
+      "area": "10000 sq ft",
+      "location": "Riverside District, EFG",
+      "facilities": ["swimming pool", "gardens", "home office"]
+    },
+    {
+      "image": "image_url6.jpg",
+      "estate_title": "Cosy Cottage in the Woods",
+      "id": 6,
+      "segment_name": "Cottage",
+      "description": "A charming cottage nestled in the woods, perfect for a peaceful retreat with nature.",
+      "price": "$300,000",
+      "status": "sale",
+      "area": "1500 sq ft",
+      "location": "Forest Area, HIJ",
+      "facilities": ["fireplace", "porch", "woodland views"]
+    },
+    {
+      "image": "image_url7.jpg",
+      "estate_title": "Downtown Loft Apartment",
+      "id": 7,
+      "segment_name": "Apartment",
+      "description": "A trendy loft apartment located in the heart of downtown, featuring industrial chic design and urban vibes.",
+      "price": "$1,500/month",
+      "status": "rent",
+      "area": "1000 sq ft",
+      "location": "Downtown, STU",
+      "facilities": ["exposed brick walls", "rooftop access", "fitness center"]
+    },
+    {
+      "image": "image_url8.jpg",
+      "estate_title": "Country Estate with Vineyard",
+      "id": 8,
+      "segment_name": "Estate",
+      "description": "A sprawling country estate with its own vineyard, offering a luxurious lifestyle amidst natural beauty.",
+      "price": "$3,000,000",
+      "status": "sale",
+      "area": "7000 sq ft",
+      "location": "Rural Countryside, VWX",
+      "facilities": ["wine cellar", "tennis court", "guest house"]
+    },
+    {
+      "image": "image_url9.jpg",
+      "estate_title": "Penthouse in Skyscraper",
+      "id": 9,
+      "segment_name": "Penthouse",
+      "description": "An exquisite penthouse perched atop a skyscraper, boasting panoramic city views and luxurious amenities.",
+      "price": "$4,000,000",
+      "status": "sale",
+      "area": "4000 sq ft",
+      "location": "City Center, YZ",
+      "facilities": ["private elevator", "rooftop terrace", "concierge service"]
+    }
+  ]
+  
