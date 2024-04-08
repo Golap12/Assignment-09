@@ -6,19 +6,22 @@ import Login from "../components/login/Login";
 import Profile from './../components/profile/Profile';
 import Details from './../components/product/Details';
 import PrivetRoute from "../assets/privetRoute/PrivetRoute";
+import Error from './../components/error/Error';
 
 
 const router = createBrowserRouter([
     {
       path: "/",
       element: <Root></Root>,
+      errorElement: <Error></Error>,
       children:[
         {
           path: '/',
           element: <Home></Home>,
+          loader: ()=> fetch('/residential.json')
         },
         {
-          path: '/details',
+          path: '/details/:id',
           element: <PrivetRoute><Details></Details></PrivetRoute>,
         },
         {
