@@ -1,24 +1,29 @@
 /* eslint-disable react/no-unescaped-entities */
-import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { useContext} from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Tower } from './../../providers/AuthProvider';
-
+import { FcGoogle } from "react-icons/fc";
+import { FaGithub } from "react-icons/fa";
 
 const Login = () => {
 
-    const { signInUser } = useContext(Tower);
+    const { signInUser, googleLogin} = useContext(Tower);
+
+    const location = useLocation();
+    const navigate = useNavigate();
 
 
     const handleLogin = e => {
         e.preventDefault();
 
         const form = new FormData(e.currentTarget);
-        // console.log(form);
+        
         const email = form.get('email');
         const password = form.get('password');
-        // console.log(email, password);
+        
         signInUser(email, password)
             .then(result => {
+                navigate(location.state)
                 console.log(result);
             })
             .catch(error => {
@@ -27,15 +32,25 @@ const Login = () => {
     }
 
 
+    const continueWithGoogle =()=>{
+        googleLogin()
+        .then(result=>{
+            navigate(location.state)
+            console.log(result);
+        })
+    }
+
+
 
     return (
-        <div>
+        
+        <div className="">
 
             <div className="text-center lg:text-left">
-                <h1 className="text-4xl font-bold text-center">Login!</h1>
+                <h1 className="text-3xl font-bold text-center">Login</h1>
             </div>
 
-            <div className="lg:px-28 xl:px-52">
+            <div className="lg:w-2/4 xl:w-1/3 md:w-2/4 mx-auto">
                 <form onSubmit={handleLogin} className="card-body">
                     <div className="form-control">
                         <label className="label">
@@ -56,8 +71,17 @@ const Login = () => {
                         <button className="btn btn-primary">Login</button>
                     </div>
                 </form>
+                <p className="label-text-alt text-center ">Don't have an account? Please <span className="link font-bold text-blue-500"><Link to='/register'>Register</Link></span></p>
+            </div>
 
-                <p className="label-text-alt text-center ">Don't have an account? Please <span className="link font-bold"><Link to='/register'>Register</Link></span></p>
+            <div className="px-[2rem] flex flex-col justify-center items-center gap-2 mt-5 lg:w-2/4 xl:w-1/3 md:w-2/4 mx-auto">
+                <div className="flex flex-col w-2/4 border-opacity-50">
+                    <div className="divider">OR</div>
+                </div>
+                <button onClick={continueWithGoogle} className="w-full shadow-sm flex gap-2 items-center p-2 border-2 rounded-lg hover:bg-gray-200"><span><FcGoogle size={25} /></span><span>Continue With Google</span></button>
+
+                <button className="w-full shadow-sm flex gap-2 items-center p-2 border-2 rounded-lg hover:bg-gray-200"><span><FaGithub size={25} /></span><span>Continue With Google</span></button>
+
             </div>
 
         </div>

@@ -40,7 +40,7 @@ const SwiperHero = () => {
               }}
               
               modules={[Autoplay, Pagination, EffectCreative]}
-            
+              loop={true}
              className="mySwiper rounded-lg">
             <SwiperSlide><img className=" lg:h-[80vh] w-[100%]" src={img1} alt="Slide 1" /></SwiperSlide>
             <SwiperSlide><img className=" lg:h-[80vh] w-[100%]" src={img2} alt="Slide 2" /></SwiperSlide>

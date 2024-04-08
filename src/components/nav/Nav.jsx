@@ -8,8 +8,8 @@ import { FiUser } from "react-icons/fi";
 const Nav = () => {
 
   const { user, logOut } = useContext(Tower);
-
-
+  // console.log(user.email);
+  
 
   const handleLogout = () => {
     logOut()
@@ -38,8 +38,7 @@ const Nav = () => {
 
         <Link to={'/'} className=" text-4xl text-[#131313] font-bold"><img className="w-[100px] h-[40px] lg:h-[50px]" src={logo} alt="" /></Link>
         
-        {/* <Link to={'/sign-in'} className="w-[40px] h-[40px] text-white font-semibold bg-[#59C6D2] 
-        rounded-full md:hidden flex justify-center items-center"><FaRegUserCircle size={25} /></Link> */}
+      
 
         {
           user ?
@@ -49,7 +48,7 @@ const Nav = () => {
                   <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
                 </div>
               </div>
-              <ul tabIndex={0} className="mt-6 z-[1] p-2 shadow border text-center dropdown-content rounded-lg w-20">
+              <ul tabIndex={0} className=" z-[1] p-2 shadow border text-center dropdown-content rounded-lg w-20">
                 <li>
                   <button onClick={handleLogout}>Log Out</button>
                 </li>
@@ -77,7 +76,7 @@ const Nav = () => {
                   <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
                 </div>
               </div>
-              <ul tabIndex={0} className="mt-6 z-[1] p-2 shadow border text-center dropdown-content rounded-lg w-20">
+              <ul tabIndex={0} className=" z-[1] p-2 shadow border text-center dropdown-content rounded-lg w-20">
                 <li>
                   <button onClick={handleLogout}>Log Out</button>
                 </li>
