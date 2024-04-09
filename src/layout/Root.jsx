@@ -5,10 +5,10 @@ import Footer from "../components/footer/Footer";
 
 const Root = () => {
     return (
-        <div className="px-5 mt-5">
+        <div className=" pt-5 rounded-b-2xl container mx-auto">
 
             <Nav></Nav>
-            <div className="mt-10 min-h-[30vh]">
+            <div className=" min-h-[57.5vh] px-5">
                 <Outlet></Outlet>
             </div>
             <Footer></Footer>

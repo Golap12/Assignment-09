@@ -1,6 +1,6 @@
 [
-    {
-      "image": "image_url1.jpg",
+  {
+      "image": "https://i.ibb.co/cw779rN/pexels-photo-106399.jpg",
       "estate_title": "Luxury Villa with Ocean View",
       "id": 1,
       "segment_name": "Villa",
@@ -9,10 +9,12 @@
       "status": "sale",
       "area": "5000 sq ft",
       "location": "Coastal City, XYZ",
-      "facilities": ["swimming pool", "garden", "home theater"]
-    },
-    {
-      "image": "image_url2.jpg",
+      "facilities": ["swimming pool", "garden", "home theater"],
+      "bedrooms": 4,
+      "bathrooms": 3
+  },
+  {
+      "image": "https://i.ibb.co/Hd35VMN/pexels-photo-210617.jpg",
       "estate_title": "Spacious Family Home",
       "id": 2,
       "segment_name": "House",
@@ -21,10 +23,12 @@
       "status": "sale",
       "area": "3000 sq ft",
       "location": "Suburban Area, ABC",
-      "facilities": ["living room", "backyard", "garage"]
-    },
-    {
-      "image": "image_url3.jpg",
+      "facilities": ["living room", "backyard", "garage"],
+      "bedrooms": 5,
+      "bathrooms": 4
+  },
+  {
+      "image": "https://i.ibb.co/xhqbLkd/pexels-photo-221024.jpg",
       "estate_title": "Cozy Apartment in Downtown",
       "id": 3,
       "segment_name": "Apartment",
@@ -33,10 +37,12 @@
       "status": "rent",
       "area": "800 sq ft",
       "location": "Downtown, PQR",
-      "facilities": ["balcony", "gym", "security"]
-    },
-    {
-      "image": "image_url4.jpg",
+      "facilities": ["balcony", "gym", "security"],
+      "bedrooms": 2,
+      "bathrooms": 1
+  },
+  {
+      "image": "https://i.ibb.co/SXV8LJp/pexels-photo-276554.jpg",
       "estate_title": "Modern Townhouse",
       "id": 4,
       "segment_name": "Townhouse",
@@ -45,10 +51,12 @@
       "status": "sale",
       "area": "2500 sq ft",
       "location": "Urban Area, LMN",
-      "facilities": ["kitchen", "rooftop terrace", "parking"]
-    },
-    {
-      "image": "image_url5.jpg",
+      "facilities": ["kitchen", "rooftop terrace", "parking"],
+      "bedrooms": 3,
+      "bathrooms": 2
+  },
+  {
+      "image": "https://i.ibb.co/L9zgmRX/pexels-photo-1571463.jpg",
       "estate_title": "Riverside Mansion",
       "id": 5,
       "segment_name": "Mansion",
@@ -57,10 +65,12 @@
       "status": "sale",
       "area": "10000 sq ft",
       "location": "Riverside District, EFG",
-      "facilities": ["swimming pool", "gardens", "home office"]
-    },
-    {
-      "image": "image_url6.jpg",
+      "facilities": ["swimming pool", "gardens", "home office"],
+      "bedrooms": 6,
+      "bathrooms": 5
+  },
+  {
+      "image": "https://i.ibb.co/z7S4cw6/pexels-photo-2343465.jpg",
       "estate_title": "Cosy Cottage in the Woods",
       "id": 6,
       "segment_name": "Cottage",
@@ -69,10 +79,12 @@
       "status": "sale",
       "area": "1500 sq ft",
       "location": "Forest Area, HIJ",
-      "facilities": ["fireplace", "porch", "woodland views"]
-    },
-    {
-      "image": "image_url7.jpg",
+      "facilities": ["fireplace", "porch", "woodland views"],
+      "bedrooms": 2,
+      "bathrooms": 1
+  },
+  {
+      "image": "https://i.ibb.co/jr49Mt2/pexels-photo-3288100.jpg",
       "estate_title": "Downtown Loft Apartment",
       "id": 7,
       "segment_name": "Apartment",
@@ -81,10 +93,12 @@
       "status": "rent",
       "area": "1000 sq ft",
       "location": "Downtown, STU",
-      "facilities": ["exposed brick walls", "rooftop access", "fitness center"]
-    },
-    {
-      "image": "image_url8.jpg",
+      "facilities": ["exposed brick walls", "rooftop access", "fitness center"],
+      "bedrooms": 1,
+      "bathrooms": 1
+  },
+  {
+      "image": "https://i.ibb.co/59mJqMR/pexels-photo-3288102.jpg",
       "estate_title": "Country Estate with Vineyard",
       "id": 8,
       "segment_name": "Estate",
@@ -93,10 +107,12 @@
       "status": "sale",
       "area": "7000 sq ft",
       "location": "Rural Countryside, VWX",
-      "facilities": ["wine cellar", "tennis court", "guest house"]
-    },
-    {
-      "image": "image_url9.jpg",
+      "facilities": ["wine cellar", "tennis court", "guest house"],
+      "bedrooms": 7,
+      "bathrooms": 6
+  },
+  {
+      "image": "https://i.ibb.co/LRSZh5b/pexels-photo-3623770.jpg",
       "estate_title": "Penthouse in Skyscraper",
       "id": 9,
       "segment_name": "Penthouse",
@@ -105,7 +121,8 @@
       "status": "sale",
       "area": "4000 sq ft",
       "location": "City Center, YZ",
-      "facilities": ["private elevator", "rooftop terrace", "concierge service"]
-    }
-  ]
-  
+      "facilities": ["private elevator", "rooftop terrace", "concierge service"],
+      "bedrooms": 3,
+      "bathrooms": 3
+  }
+]

@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { createContext, useEffect, useState } from "react";
-import { GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
+import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import app from "../firebase/firebase.config";
 
 export const Tower = createContext(null);
@@ -9,34 +9,55 @@ const auth = getAuth(app);
 
 const AuthProvider = ({ children }) => {
 
-    const [user, setUser] = useState(null)
+    const [user, setUser] = useState(null);
+    const [loading, setLoading] = useState(true);
 
 
-    const provider = new GoogleAuthProvider();
+    const googleProvider = new GoogleAuthProvider();
+    const githubProvider = new GithubAuthProvider();
+
 
     const googleLogin = () => {
-        return signInWithPopup(auth, provider);
+        setLoading(true);
+        return signInWithPopup(auth, googleProvider);
+    }
+    const githubLogin = () => {
+        setLoading(true);
+        return signInWithPopup(auth, githubProvider);
     }
 
+
     const createUser = (email, password) => {
+        setLoading(true);
         return createUserWithEmailAndPassword(auth, email, password);
     }
 
 
     const signInUser = (email, password) => {
+        setLoading(true);
         return signInWithEmailAndPassword(auth, email, password);
     }
 
     const logOut = () => {
+        setLoading(true);
         return signOut(auth);
+    }
+
+    const updateUserProfile = (name, photoURL) =>{
+        setLoading(true);
+        return updateProfile(auth.currentUser, {
+            displayName: name,
+            photoURL: photoURL,
+        })
     }
 
 
 
     useEffect(() => {
         const unSubscribe = onAuthStateChanged(auth, (user) => {
-            console.log('user in auth state changed', user);
+            // console.log('user in auth state changed', user);
             setUser(user);
+            setLoading(false);
 
         });
         return () => {
@@ -48,10 +69,13 @@ const AuthProvider = ({ children }) => {
 
     const authData = {
         user,
+        loading,
         createUser,
         logOut,
         signInUser,
-        googleLogin
+        googleLogin,
+        githubLogin,
+        updateUserProfile
     }
 
 
@@ -61,6 +85,7 @@ const AuthProvider = ({ children }) => {
         <Tower.Provider value={authData}>
             {children}
         </Tower.Provider>
+        
     );
 };
 

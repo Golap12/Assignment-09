@@ -1,13 +1,23 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Tower } from './../../providers/AuthProvider';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { IoEyeOffSharp } from "react-icons/io5";
+import { MdRemoveRedEye } from "react-icons/md";
+import { AwesomeButton } from 'react-awesome-button';
+import 'react-awesome-button/dist/styles.css';
+import regImg from "../../assets/images/172.jpg";
 
 
 const Register = () => {
+
+    // const navigate = useNavigate();
+
     const { createUser } = useContext(Tower);
     const [error, setError] = useState("");
+    const [registerError, setRegisterError] = useState('');
+    const [showPassword, setShowPassword] = useState(false);
 
     const handleRegister = e => {
         e.preventDefault();
@@ -15,15 +25,16 @@ const Register = () => {
         const form = new FormData(e.currentTarget);
         const email = form.get('email');
         const password = form.get('password');
+        setRegisterError('');
 
         if (password.length < 6) {
-            setError("Password must be 6 Character!")
+            setError("Password should be at least 6 Character!")
             return
         }
 
         if (!/[A-Z]/.test(password)) {
-            setError("Password must contain at least 1 uppercase character!")   
-            return         
+            setError("Password must contain at least 1 uppercase character!")
+            return
         }
 
         if (!/[a-z]/.test(password)) {
@@ -37,25 +48,32 @@ const Register = () => {
         createUser(email, password)
             .then(result => {
                 console.log(result.user);
-                toast('Registered Successfully')
-                  
+                toast('Successfully Registered')
+                // navigate('/login');
             })
             .catch(error => {
                 console.log(error);
+                setRegisterError(error.message)
             })
     }
 
     return (
 
 
-        <div>
+        <div className="mt-10 p-5">
 
             <div className="text-center lg:text-left">
-                <h1 className="text-3xl font-bold text-center">Create An Account</h1>
+                <h1 className="text-3xl font-bold text-center">Create An Account!</h1>
             </div>
 
-            <div className="lg:px-28 xl:px-52">
-                <form onSubmit={handleRegister} className="card-body">
+            <div className=" md:flex flex-row-reverse mt-5 md:p-9 p-4 gap-5 space-y-5  border rounded-lg">
+
+                <div className="flex-1 border-2 rounded-lg">
+                    <h1 className="text-center text-xl md:text-3xl font-bold mt-10">Provide Your Information</h1>
+                    <hr className="w-3/4 mx-auto mt-2 border-dashed border-2" />
+
+
+                <form onSubmit={handleRegister} className="card-body p-4 md:p-8">
 
                     <div className="form-control">
                         <label className="label">
@@ -75,26 +93,43 @@ const Register = () => {
                         <label className="label">
                             <span className="label-text">Photo Url</span>
                         </label>
-                        <input type="text" name="photoUrl" placeholder="Photo Url" className="input input-bordered" required />
+                        <input type="text" name="photoUrl" placeholder="Photo Url" className="input input-bordered" />
                     </div>
 
-                    <div className="form-control">
+                    <div className="form-control relative">
                         <label className="label">
                             <span className="label-text">Password</span>
                         </label>
-                        <input type="password" name="password" placeholder="Password" className="input input-bordered" required />
+                        <input
+                            type={showPassword ? 'text' : 'password'}
+                            name="password"
+                            placeholder="Password"
+                            className="input input-bordered"
+                            required />
+
+                            <span onClick={()=> setShowPassword(!showPassword)} className="cursor-pointer absolute top-[3.3rem] right-[11px]">{showPassword ? <IoEyeOffSharp></IoEyeOffSharp> : <MdRemoveRedEye></MdRemoveRedEye>}</span>
                     </div>
 
-                        {
-                            error && <small className="text-red-800">{error}</small>
-                        }
+                    {
+                        error && <small className="text-red-800">{error}</small>
+
+                    }
+                    {
+                        registerError && <small className="text-red-700">{registerError}</small>
+                    }
 
                     <div className="form-control mt-6">
-                        <button className="btn btn-primary">Login</button>
+                        <AwesomeButton><p>Register</p></AwesomeButton>
                     </div>
                 </form>
 
-                <p className="label-text-alt text-center ">Already have an account? Please <span className="link font-bold text-blue-500"><Link to='/login'>Login</Link></span></p>
+                <p className="label-text-alt text-center mb-4">Already have an account? Please <span className="link font-bold text-blue-500"><Link to='/login'>Login</Link></span></p>
+                </div>
+
+                <div className="flex-1">
+                    <div><img src={regImg} alt="" /></div>
+                </div>
+
             </div>
             <ToastContainer />
         </div>
