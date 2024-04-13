@@ -4,26 +4,18 @@ import { Tower } from './../../providers/AuthProvider';
 import logo from "../../assets/images/logo.png";
 import avatar from "../../assets/images/avatar.jpg";
 import { FiUser } from "react-icons/fi";
-<<<<<<< HEAD
 import { PiSignOutFill } from "react-icons/pi";
 
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 // ..
 AOS.init();
-=======
-// import { FaUserNurse } from "react-icons/fa";
->>>>>>> origin/main
 
 
 const Nav = () => {
 
   const { user, logOut } = useContext(Tower);
-<<<<<<< HEAD
   const [isHovering, setIsHovering] = useState(false);
-=======
-  
->>>>>>> origin/main
   
 
   const handleLogout = () => {
@@ -31,40 +23,23 @@ const Nav = () => {
   }
 
   const links = <>
-<<<<<<< HEAD
-    <li data-aos="fade-left" data-aos-duration="1000"><NavLink className={({ isActive }) => isActive ? ' md:text-lg text-[12px] p-1 text-[#fff] bg-[#08ccc4] md:px-3 md:py-2 md:font-medium hover:transition-all border rounded-sm border-[#08ccc4]' : 'hover:transition-all md:text-lg text-[12px] md:px-3 md:py-2 md:font-medium'} to='/'>Home</NavLink></li>
+    <li data-aos="fade-left" data-aos-duration="1000"><NavLink className={({ isActive }) => isActive ? ' md:text-lg text-[12px] p-1 text-[#fff] bg-[#08ccc4] md:px-3 md:py-2 md:font-medium hover:transition-all border rounded-sm border-[#08ccc4]' : 'hover:transition-all md:text-lg text-[12px] md:px-3 md:py-2 p-1 md:font-medium'} to='/'>Home</NavLink></li>
 
-    <li data-aos="fade-up" data-aos-duration="1000"><NavLink className={({ isActive }) => isActive ? 'md:text-lg text-[#fff] bg-[#08ccc4] text-[12px] p-1  md:px-3 md:py-2 md:font-medium hover:transition-all border rounded-sm border-[#08ccc4]' : 'hover:transition-all md:text-lg md:px-3 md:py-2 text-[12px] p-1  md:font-medium '} to='/profile'>Update Profile</NavLink></li>
+    <li data-aos="fade-up" data-aos-duration="1000"><NavLink className={({ isActive }) => isActive ? 'md:text-lg text-[12px] p-1 text-[#fff] bg-[#08ccc4] md:px-3 md:py-2 md:font-medium hover:transition-all border rounded-sm border-[#08ccc4]' : 'hover:transition-all md:text-lg md:px-3 md:py-2 text-[12px] p-1  md:font-medium '} to='/profile'>Update Profile</NavLink></li>
 
-    <li data-aos="fade-right" data-aos-duration="1000"><NavLink className={({ isActive }) => isActive ? 'md:text-lg text-[#fff] bg-[#08ccc4] md:px-3 md:py-2 md:font-medium hover:transition-all border rounded-sm border-[#08ccc4] text-[12px] p-1 ' : 'hover:transition-all md:text-lg md:px-3 md:py-2  text-[12px] p-1 md:font-medium '} to='/no'>No Route</NavLink></li>
-=======
-    <li><NavLink className={({ isActive }) => isActive ? ' text-lg text-black px-3 py-2 font-medium hover:underline underline hover:transition-all' : 'hover:transition-all text-lg hover:underline px-3 py-2 font-medium '} to='/'>Home</NavLink></li>
-
-    <li><NavLink className={({ isActive }) => isActive ? ' text-lg text-black px-3 py-2 font-medium hover:underline underline hover:transition-all' : 'hover:transition-all text-lg hover:underline px-3 py-2 font-medium '} to='/profile'>Update Profile</NavLink></li>
-
-    <li><NavLink className={({ isActive }) => isActive ? ' text-lg text-black px-3 py-2 font-medium hover:underline underline hover:transition-all' : 'hover:transition-all text-lg hover:underline px-3 py-2 font-medium '} to='/userprofile'>User Profile</NavLink></li>
->>>>>>> origin/main
+    <li data-aos="fade-right" data-aos-duration="1000"><NavLink className={({ isActive }) => isActive ? 'md:text-lg text-[12px] p-1 text-[#fff] bg-[#08ccc4] md:px-3 md:py-2 md:font-medium hover:transition-all border rounded-sm border-[#08ccc4]' : 'hover:transition-all md:text-lg md:px-3 md:py-2  text-[12px] p-1 md:font-medium '} to='/no'>No Route</NavLink></li>
   </>
 
 
   return (
-<<<<<<< HEAD
     <div className=" flex items-center rounded-lg p-3 md:p-5 bg-[#effbff]">
       <div  className="navbar-start items-center lg:justify-start justify-between flex w-full md:w-[50%]">
-=======
-    <div className="flex items-center rounded-lg px-5">
-      <div className="navbar-start items-center lg:justify-start justify-between flex w-full md:w-[50%]">
->>>>>>> origin/main
         <div className="dropdown">
 
           <div tabIndex={0} role="button" className=" lg:hidden">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
           </div>
-<<<<<<< HEAD
           <ul tabIndex={0} className="backdrop-blur-md rounded-lg bg-[#ffffff47] border dropdown-content mt-3 p-1 w-40 gap-2 nav">
-=======
-          <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow rounded-lg w-40 bg-slate-200 gap-2 nav">
->>>>>>> origin/main
             {links}
           </ul>
         </div>
@@ -110,7 +85,6 @@ const Nav = () => {
 
         {
           user ?
-<<<<<<< HEAD
           <div data-aos="fade-left" className="dropdown dropdown-end flex items-center gap-2" >
           <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
             <div onMouseEnter={() => setIsHovering(true)} onMouseLeave={() => setIsHovering(false)} className="w-10 rounded-full border-2" >
@@ -121,19 +95,6 @@ const Nav = () => {
                   <img onMouseEnter={() => setIsHovering(true)} onMouseLeave={() => setIsHovering(false)} alt="" src={avatar} />
                   
               }
-=======
-            <div className="dropdown dropdown-end">
-              <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-                <div className="w-10 rounded-full border-2">
-                  <img alt="" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-                </div>
-              </div>
-              <ul tabIndex={0} className=" z-[1] p-2 shadow border text-center dropdown-content rounded-lg w-20">
-                <li>
-                  <button onClick={handleLogout}>Log Out</button>
-                </li>
-              </ul>
->>>>>>> origin/main
             </div>
           </div>
           

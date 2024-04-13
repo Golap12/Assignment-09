@@ -5,15 +5,9 @@ AOS.init();
 
 const Footer = () => {
     return (
-<<<<<<< HEAD
         <footer className="mt-10 divide-y bg-[#4fe2d8] rounded-t-[70px]">
             <div className=" container px-4 flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
                 <div data-aos="fade-right" data-aos-duration="1000" className="lg:w-1/3">
-=======
-        <footer className="mt-10 px-4 divide-y bg-gray-800 dark:bg-gray-200 text-gray-100 dark:text-gray-800">
-            <div className="container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
-                <div className="lg:w-1/3">
->>>>>>> origin/main
                     <a rel="noopener noreferrer" href="#" className="flex justify-center space-x-3 lg:justify-start">
                         <div className="flex items-center justify-center w-12 h-12 rounded-full bg-[#08CCC4]">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor" className="flex-shrink-0 w-5 h-5 rounded-full text-gray-900 dark:text-gray-50">

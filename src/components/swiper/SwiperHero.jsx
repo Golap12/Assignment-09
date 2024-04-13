@@ -42,12 +42,12 @@ const SwiperHero = () => {
         }}
         modules={[Autoplay, Pagination, EffectCreative, EffectFade]}
         loop={true}
-        className="mySwiper  w-[98%] h-[500px] rounded-t-[70px]"
+        className="mySwiper  w-[98%] h-[500px] rounded-"
       >
         <SwiperSlide className="">
-          <div className="rounded-t-[70px]"
+          <div className=""
             style={{
-              backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${img5})`,
+              backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(${img5})`,
               backgroundPosition: "center",
               backgroundSize: "cover",
               display: "flex",
@@ -58,13 +58,12 @@ const SwiperHero = () => {
               color: "WHITE",
               fontSize: "5rem",
             }}>
-              KHELA HOBBE
           </div>
         </SwiperSlide>
         <SwiperSlide className="">
-          <div className="rounded-t-[70px]"
+          <div className=""
             style={{
-              backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${img6})`,
+              backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(${img6})`,
               backgroundPosition: "center",
               backgroundSize: "cover",
               display: "flex",
@@ -75,13 +74,12 @@ const SwiperHero = () => {
               color: "WHITE",
               fontSize: "5rem",
             }}>
-              KHELA HOBBE
           </div>
         </SwiperSlide>
         <SwiperSlide className="">
-          <div className="rounded-t-[70px]"
+          <div className=""
             style={{
-              backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${img4})`,
+              backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(${img4})`,
               backgroundPosition: "center",
               backgroundSize: "cover",
               display: "flex",
@@ -92,13 +90,12 @@ const SwiperHero = () => {
               color: "WHITE",
               fontSize: "5rem",
             }}>
-              KHELA HOBBE
           </div>
         </SwiperSlide>
         <SwiperSlide className="">
-          <div className="rounded-t-[70px]"
+          <div className=""
             style={{
-              backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${img7})`,
+              backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(${img7})`,
               backgroundPosition: "center",
               backgroundSize: "cover",
               display: "flex",
@@ -109,13 +106,12 @@ const SwiperHero = () => {
               color: "WHITE",
               fontSize: "5rem",
             }}>
-              KHELA HOBBE
           </div>
         </SwiperSlide>
         <SwiperSlide className="">
-          <div className="rounded-t-[70px]"
+          <div className=""
             style={{
-              backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${img8})`,
+              backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(${img8})`,
               backgroundPosition: "center",
               backgroundSize: "cover",
               display: "flex",
@@ -126,7 +122,6 @@ const SwiperHero = () => {
               color: "WHITE",
               fontSize: "5rem",
             }}>
-              KHELA HOBBE
           </div>
         </SwiperSlide>
       </Swiper>
