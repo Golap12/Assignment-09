@@ -44,7 +44,6 @@ const AuthProvider = ({ children }) => {
     }
 
     const updateUserProfile = (name, photoURL) =>{
-        setLoading(true);
         return updateProfile(auth.currentUser, {
             displayName: name,
             photoURL: photoURL,
@@ -55,7 +54,6 @@ const AuthProvider = ({ children }) => {
 
     useEffect(() => {
         const unSubscribe = onAuthStateChanged(auth, (user) => {
-            // console.log('user in auth state changed', user);
             setUser(user);
             setLoading(false);
 

@@ -1,72 +1,136 @@
 import { Swiper, SwiperSlide } from "swiper/react";
+
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
+// ..
+AOS.init();
+
 import img4 from "../../assets/images/4.jpg";
 import img5 from "../../assets/images/5.jpg";
 import img6 from "../../assets/images/6.jpg";
 import img7 from "../../assets/images/7.jpg";
 import img8 from "../../assets/images/8.jpg";
 
-import { Autoplay, Pagination, EffectCreative } from "swiper/modules";
+import { Autoplay, Pagination, EffectCreative, EffectFade } from "swiper/modules";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import 'swiper/css/effect-fade';
 import "swiper/css";
 import "swiper/css/bundle";
 
 const SwiperHero = () => {
   return (
-    <>
-      
-        <Swiper
-          grabCursor={true}
-          effect={"creative"}
-          creativeEffect={{
-            prev: {
-              shadow: true,
-              translate: [0, 0, -400],
-            },
-            next: {
-              translate: ["100%", 0, 0],
-            },
-          }}
-          autoplay={{
-            delay: 2500,
-            disableOnInteraction: false,
-          }}
-          pagination={{
-            clickable: true,
-          }}
-          modules={[Autoplay, Pagination, EffectCreative]}
-          loop={true}
-          className="mySwiper mt-10 rounded-lg lg:h-[70vh] w-[100%] mx-auto"
-        >
-          <SwiperSlide>
-            <div>
-              <img src={img4} alt="Slide 5" />
-            </div>
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <div>
-              <img src={img5} alt="Slide 5" />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div>
-              <img src={img6} alt="Slide 6" />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div>
-              <img src={img7} alt="Slide 7" />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div>
-              <img src={img8} alt="Slide 8" />
-            </div>
-          </SwiperSlide>
-        </Swiper>
-      
-    </>
+    <div data-aos="flip-up" data-aos-duration="1000" className="">
+      <Swiper
+        grabCursor={true}
+        effect={"fade"}
+        creativeEffect={{
+          prev: {
+            shadow: true,
+            translate: [0, 0, -400],
+          },
+          next: {
+            translate: ["100%", 0, 0],
+          },
+        }}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[Autoplay, Pagination, EffectCreative, EffectFade]}
+        loop={true}
+        className="mySwiper  w-[98%] h-[500px] rounded-t-[70px]"
+      >
+        <SwiperSlide className="">
+          <div className="rounded-t-[70px]"
+            style={{
+              backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${img5})`,
+              backgroundPosition: "center",
+              backgroundSize: "cover",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              width: "100%",
+              height: "100%",
+              color: "WHITE",
+              fontSize: "5rem",
+            }}>
+              KHELA HOBBE
+          </div>
+        </SwiperSlide>
+        <SwiperSlide className="">
+          <div className="rounded-t-[70px]"
+            style={{
+              backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${img6})`,
+              backgroundPosition: "center",
+              backgroundSize: "cover",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              width: "100%",
+              height: "100%",
+              color: "WHITE",
+              fontSize: "5rem",
+            }}>
+              KHELA HOBBE
+          </div>
+        </SwiperSlide>
+        <SwiperSlide className="">
+          <div className="rounded-t-[70px]"
+            style={{
+              backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${img4})`,
+              backgroundPosition: "center",
+              backgroundSize: "cover",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              width: "100%",
+              height: "100%",
+              color: "WHITE",
+              fontSize: "5rem",
+            }}>
+              KHELA HOBBE
+          </div>
+        </SwiperSlide>
+        <SwiperSlide className="">
+          <div className="rounded-t-[70px]"
+            style={{
+              backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${img7})`,
+              backgroundPosition: "center",
+              backgroundSize: "cover",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              width: "100%",
+              height: "100%",
+              color: "WHITE",
+              fontSize: "5rem",
+            }}>
+              KHELA HOBBE
+          </div>
+        </SwiperSlide>
+        <SwiperSlide className="">
+          <div className="rounded-t-[70px]"
+            style={{
+              backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${img8})`,
+              backgroundPosition: "center",
+              backgroundSize: "cover",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              width: "100%",
+              height: "100%",
+              color: "WHITE",
+              fontSize: "5rem",
+            }}>
+              KHELA HOBBE
+          </div>
+        </SwiperSlide>
+      </Swiper>
+    </div>
   );
 };
 

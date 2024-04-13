@@ -21,11 +21,8 @@ const router = createBrowserRouter([
       },
       {
         path: "/details/:id",
-        element: (
-          <PrivetRoute>
-            <Details></Details>
-          </PrivetRoute>
-        ),
+        element: <PrivetRoute><Details></Details></PrivetRoute>,
+        loader: () => fetch("/residential.json"),
       },
       {
         path: "/register",
