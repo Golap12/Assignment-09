@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* eslint-disable react/jsx-key */
 import { useParams } from "react-router-dom";
 import { useLoaderData } from "react-router-dom";
@@ -60,6 +61,17 @@ const Details = () => {
             <div className="border border-gray-500 h-[20px] mx-2"></div>
             <p className="font-bold">{segment_name}</p>
           </div>
+=======
+import { useParams } from "react-router-dom";
+
+
+const Details = () => {
+    const {id} = useParams()
+    return (
+        <div className="text-center">
+            <h1>this is details page</h1>
+            <p>{id}</p>
+>>>>>>> origin/main
         </div>
 
         <div className="flex gap-3 mt-3">

@@ -1,6 +1,10 @@
 /* eslint-disable react/prop-types */
 import { createContext, useEffect, useState } from "react";
+<<<<<<< HEAD
 import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
+=======
+import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
+>>>>>>> origin/main
 import app from "../firebase/firebase.config";
 
 export const Tower = createContext(null);
@@ -72,8 +76,12 @@ const AuthProvider = ({ children }) => {
         logOut,
         signInUser,
         googleLogin,
+<<<<<<< HEAD
         githubLogin,
         updateUserProfile
+=======
+        githubLogin
+>>>>>>> origin/main
     }
 
 
