@@ -1,13 +1,14 @@
+/* eslint-disable react/no-unescaped-entities */
 const Testimonial = () => {
   return (
-    <section className="py-12 bg-gray-50 sm:py-16 lg:py-20">
+    <section className="py-12 bg-[#09191f] sm:py-16 lg:py-20">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="flex flex-col items-center">
           <div className="text-center">
-            <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl xl:text-5xl">
+            <h2 className="mb-4 text-3xl font-bold text-white sm:text-4xl xl:text-5xl">
               Our happy clients say about us
             </h2>
-            <p className="text-lg font-medium text-gray-600">
+            <p className="text-lg font-medium text-gray-400">
               2,157 people have said how good Rareblocks
             </p>
           </div>
@@ -16,7 +17,7 @@ const Testimonial = () => {
             <a
               href="#"
               title=""
-              className="pb-2 text-base font-bold leading-7 text-gray-900 transition-all duration-200 border-b-2 border-gray-900 hover:border-gray-600 font-pj focus:outline-none focus:ring-1 focus:ring-gray-900 focus:ring-offset-2 hover:text-gray-600"
+              className="pb-2 text-base font-bold leading-7 text-gray-200 transition-all duration-200 border-b-2 border-gray-200 hover:border-gray-600 font-pj focus:outline-none focus:ring-1 focus:ring-gray-900 focus:ring-offset-2 hover:text-gray-600"
             >
               {" "}
               Check all 2,157 reviews{" "}
@@ -35,7 +36,7 @@ const Testimonial = () => {
 
             <div className="relative grid max-w-lg grid-cols-1 gap-6 mx-auto md:max-w-none lg:gap-10 md:grid-cols-3">
               <div className="flex flex-col overflow-hidden shadow-xl">
-                <div className="flex flex-col justify-between flex-1 p-6 bg-white lg:py-8 lg:px-7">
+                <div className="flex flex-col justify-between flex-1 p-6 bg-[#153847] lg:py-8 lg:px-7">
                   <div className="flex-1">
                     <div className="flex items-center">
                       <svg
@@ -81,7 +82,7 @@ const Testimonial = () => {
                     </div>
 
                     <blockquote className="flex-1 mt-8">
-                      <p className="text-lg leading-relaxed text-gray-900 font-pj">
+                      <p className="text-lg leading-relaxed text-white font-pj">
                       “Found my dream home quickly with this site's easy navigation and detailed listings. Now a proud homeowner!”
                       </p>
                     </blockquote>
@@ -94,10 +95,10 @@ const Testimonial = () => {
                       alt=""
                     />
                     <div className="ml-4">
-                      <p className="text-base font-bold text-gray-900 font-pj">
+                      <p className="text-base font-bold text-white font-pj">
                         Leslie Alexander
                       </p>
-                      <p className="mt-0.5 text-sm font-pj text-gray-600">
+                      <p className="mt-0.5 text-sm font-pj text-white">
                         Freelance React Developer
                       </p>
                     </div>
@@ -105,8 +106,8 @@ const Testimonial = () => {
                 </div>
               </div>
 
-              <div className="flex flex-col overflow-hidden shadow-xl">
-                <div className="flex flex-col justify-between flex-1 p-6 bg-white lg:py-8 lg:px-7">
+              <div className="flex flex-col overflow-hidden shadow-xl text-white">
+                <div className="flex flex-col justify-between flex-1 p-6 bg-[#153847] lg:py-8 lg:px-7">
                   <div className="flex-1">
                     <div className="flex items-center">
                       <svg
@@ -163,10 +164,10 @@ const Testimonial = () => {
                       alt=""
                     />
                     <div className="ml-4">
-                      <p className="text-base font-bold text-gray-900 font-pj">
+                      <p className="text-base font-bold  font-pj">
                         Jacob Jones
                       </p>
-                      <p className="mt-0.5 text-sm font-pj text-gray-600">
+                      <p className="mt-0.5 text-sm font-pj text-gray-400">
                         Digital Marketer
                       </p>
                     </div>
@@ -174,8 +175,8 @@ const Testimonial = () => {
                 </div>
               </div>
 
-              <div className="flex flex-col overflow-hidden shadow-xl">
-                <div className="flex flex-col justify-between flex-1 p-6 bg-white lg:py-8 lg:px-7">
+              <div className="flex flex-col overflow-hidden shadow-xl text-white">
+                <div className="flex flex-col justify-between flex-1 p-6 bg-[#153847] lg:py-8 lg:px-7">
                   <div className="flex-1">
                     <div className="flex items-center">
                       <svg
@@ -221,7 +222,7 @@ const Testimonial = () => {
                     </div>
 
                     <blockquote className="flex-1 mt-8">
-                      <p className="text-lg leading-relaxed text-gray-900 font-pj">
+                      <p className="text-lg leading-relaxed  font-pj">
                       “Sold my property effortlessly with this site's user-friendly listing process and excellent customer support. Highly recommend!”
                       </p>
                     </blockquote>
@@ -234,10 +235,10 @@ const Testimonial = () => {
                       alt=""
                     />
                     <div className="ml-4">
-                      <p className="text-base font-bold text-gray-900 font-pj">
+                      <p className="text-base font-bold  font-pj">
                         Jenny Wilson
                       </p>
-                      <p className="mt-0.5 text-sm font-pj text-gray-600">
+                      <p className="mt-0.5 text-sm font-pj text-gray-400">
                         Graphic Designer
                       </p>
                     </div>

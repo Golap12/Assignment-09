@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import { Tower } from "./../../providers/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -9,12 +9,14 @@ import { AwesomeButton } from "react-awesome-button";
 import "react-awesome-button/dist/styles.css";
 import regImg from "../../assets/images/172.jpg";
 import { Helmet } from "react-helmet-async";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
 
 const Register = () => {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
-  const { createUser } = useContext(Tower);
+  const { createUser, updateUserProfile } = useContext(Tower);
   const [error, setError] = useState("");
   const [registerError, setRegisterError] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -25,6 +27,9 @@ const Register = () => {
     const form = new FormData(e.currentTarget);
     const email = form.get("email");
     const password = form.get("password");
+    const name = form.get("name");
+    const photoURL = form.get("photoUrl");
+    // console.log(name,photoURL);
     setRegisterError("");
 
     if (password.length < 6) {
@@ -45,19 +50,31 @@ const Register = () => {
     setError("");
 
     createUser(email, password)
-      .then((result) => {
-        console.log(result.user);
-        toast("Successfully Registered");
-        // navigate('/login');
-      })
-      .catch((error) => {
-        console.log(error);
-        setRegisterError(error.slice(22, 50));
-      });
+    .then((result) => {
+      console.log(result.user);
+      toast("Successfully Registered");
+      updateUserProfile(name, photoURL)
+        .then(() => {
+          setTimeout(() => {
+            navigate('/login');
+          }, 2000);
+        })
+        .catch((error) => {
+          console.error("Error updating user profile:", error);
+        });
+    })
+    .catch((error) => {
+      console.error("Registration error:", error);
+      setRegisterError(error.slice(22, 50));
+    });
   };
 
   return (
-    <div className="mt-10 p-5">
+    <div
+      data-aos="fade-down"
+      data-aos-duration="1000"
+      className="mt-10 p-5 text-white "
+    >
       <Helmet>
         <title>New Home-Register</title>
       </Helmet>
@@ -66,14 +83,19 @@ const Register = () => {
         <h1 className="text-3xl font-bold text-center">Create An Account!</h1>
       </div>
 
-      <div className="flex sm:flex-col md:flex-row-reverse mt-5 md:p-9 p-4 gap-5 space-y-5  border rounded-lg">
-        <div className="flex-1 border-2 rounded-lg bg-[#effbff]">
+      <div className=" flex sm:flex-col md:flex-row-reverse mt-5 md:p-9 p-4 gap-5 space-y-5  border rounded-lg">
+        <div className="flex-1 border-2 rounded-lg bg-[#09191f]">
           <h1 className="text-center text-xl md:text-3xl font-bold mt-10">
             Provide Your Information
           </h1>
           <hr className="w-3/4 mx-auto mt-2 border-dashed border-2" />
 
-          <form onSubmit={handleRegister} className="card-body p-4 md:p-8 ">
+          <form
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+            onSubmit={handleRegister}
+            className="card-body p-4 md:p-8 "
+          >
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Name</span>
@@ -82,7 +104,7 @@ const Register = () => {
                 type="text"
                 name="name"
                 placeholder="Name"
-                className="input input-bordered"
+                className="input input-bordered bg-[#0f3338]"
                 required
               />
             </div>
@@ -95,7 +117,7 @@ const Register = () => {
                 type="email"
                 name="email"
                 placeholder="Email"
-                className="input input-bordered"
+                className="input input-bordered bg-[#0f3338]"
                 required
               />
             </div>
@@ -108,7 +130,7 @@ const Register = () => {
                 type="text"
                 name="photoUrl"
                 placeholder="Photo Url"
-                className="input input-bordered"
+                className="input input-bordered bg-[#0f3338]"
               />
             </div>
 
@@ -120,7 +142,7 @@ const Register = () => {
                 type={showPassword ? "text" : "password"}
                 name="password"
                 placeholder="Password"
-                className="input input-bordered"
+                className="input input-bordered bg-[#0f3338]"
                 required
               />
 
@@ -148,7 +170,7 @@ const Register = () => {
             </div>
           </form>
 
-          <p className="label-text-alt text-center mb-4">
+          <p className="label-text-alt text-center mb-4 text-white">
             Already have an account? Please{" "}
             <span className="link font-bold text-blue-500">
               <Link to="/login">Login</Link>

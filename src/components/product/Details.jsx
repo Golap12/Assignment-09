@@ -8,6 +8,10 @@ import { FaRegStar } from "react-icons/fa6";
 import { AwesomeButton } from 'react-awesome-button';
 import { FaWhatsapp } from "react-icons/fa";
 import { Helmet } from "react-helmet-async";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
 
 
 const Details = () => {
@@ -33,7 +37,7 @@ const Details = () => {
 
 
   return (
-    <div className="mt-10 px-5 space-y-5">
+    <div className="mt-10 px-5 space-y-5 text-[#ffffffb6]">
       <Helmet>
         <title>New Home-Details</title>
       </Helmet>
@@ -41,7 +45,7 @@ const Details = () => {
         {/* title */}
       <div className="md:flex justify-between items-center">
         <div className="space-y-3">
-          <p className="md:text-4xl text-xl font-extrabold">{estate_title}</p>
+          <p className="md:text-4xl text-xl font-extrabold text-white">{estate_title}</p>
           <div className="flex items-center gap-2 flex-wrap">
             <p className="flex gap-2">
               <MdOutlineBedroomParent
@@ -74,7 +78,7 @@ const Details = () => {
       </div>
 
         {/* image */}
-        <div className="md:h-[500px] grid grid-cols-2 md:grid-cols-5 md:grid-rows-2 gap-2 border p-2">
+        <div data-aos="flip-up" data-aos-duration="1000" className="md:h-[500px] grid grid-cols-2 md:grid-cols-5 md:grid-rows-2 gap-2 border p-2">
           <div className="md:col-span-3 col-span-2 md:row-span-2 overflow-hidden">
             <img className="w-full h-full object-cover" src={image} alt="" />
           </div>
@@ -91,10 +95,10 @@ const Details = () => {
        <div className="md:flex space-y-5 md:space-y-0 gap-5">
 
 
-          <div className="description p-5 flex-1">
+          <div  data-aos="flip-right" data-aos-duration="1000" className="description p-5 flex-1">
                {/* description */}
         <div>
-          <p className="text-2xl font-bold mb-2">
+          <p className="text-2xl font-bold mb-2 text-white">
             Property Description
           </p>
           <p>{description}</p>
@@ -107,7 +111,7 @@ const Details = () => {
         
         <div>
           <div className="mb-2">
-            <h1 className="text-2xl font-bold">Property Feature</h1>
+            <h1 className="text-2xl font-bold text-white">Property Feature</h1>
           </div>
         <div className="flex gap-10">
           <div className="space-y-3">
@@ -130,7 +134,7 @@ const Details = () => {
 
         {/* Our Facilities */}
         <div>
-          <h1 className="text-2xl font-bold">Our Facilities</h1>
+          <h1 className="text-2xl font-bold text-white">Our Facilities</h1>
           <div className="">
             {facilities.map((item, idx) => (
               <li className="uppercase my-2 ml-5" key={idx}>
@@ -143,7 +147,7 @@ const Details = () => {
           </div>
 
 
-          <div className="bg-[#effbff] p-5 flex-1 flex flex-col items-center shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]">
+          <div  data-aos="flip-left" data-aos-duration="1000" className="bg-[#0f2b35] p-5 flex-1 flex flex-col items-center shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]">
             <h1 className="md:text-3xl text-xl font-bold text-[#08ccc4]">Get In Touch</h1>
 
              <div className="border border-dashed w-2/4 my-3"></div>
@@ -154,25 +158,25 @@ const Details = () => {
                         <label className="label">
                             <span className="label-text">NAME</span>
                         </label>
-                        <input type="text" name="name" placeholder="Name" className="border px-5 py-3 outline-none input-bordered" required />
+                        <input type="text" name="name" placeholder="Name" className="border px-5 py-3 outline-none input-bordered bg-[#0f3338]" required />
                     </div>
 
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">EMAIL</span>
                         </label>
-                        <input type="email" name="email" placeholder="Email" className="border px-5 py-3 outline-none input-bordered" required />
+                        <input type="email" name="email" placeholder="Email" className="border px-5 py-3 outline-none input-bordered bg-[#0f3338]" required />
                     </div>
 
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">MESSAGE</span>
                         </label>
-                        <textarea placeholder="YOUR MESSAGE (OPTIONAL)" className="border outline-none textarea-bordered textarea-lg w-full resize-none" ></textarea>
+                        <textarea placeholder="YOUR MESSAGE (OPTIONAL)" className="border outline-none textarea-bordered textarea-lg w-full resize-none bg-[#0f3338]" ></textarea>
                     </div>
 
                     <div className="form-control mt-6">
-                        <AwesomeButton  type="secondary"><p>SEND ENQUIRY</p></AwesomeButton>
+                        <AwesomeButton  type="primary"><p>SEND</p></AwesomeButton>
                     </div>
 
                     <h3 className="text-center mt-5 text-xl font-semibold">SEND MESSAGE BY WHATSAPP</h3>

@@ -22,18 +22,18 @@ const Home = () => {
       
       <div className="md:mt-10 mt-[0.5rem] relative">
         <SwiperHero></SwiperHero>
-        <div className="absolute md:top-[100px] top-[50px] left-[10%] md:w-3/4 w-3/4  text-white">
-          <h1 className="text-4xl font-extrabold md:w-2/4">
+        <div className="absolute md:top-[100px] top-[50px] left-[10%] md:w-3/4 w-3/4 duration-300  text-white">
+          <h1 className="text-5xl font-extrabold md:w-2/4">
             Welcome to Your Dream Home
           </h1>
-          <p className="mt-5 text-[#ffffff8f]">
+          <p className="mt-5 text-[#ffffffb6]">
             Find the perfect property for your lifestyle and create lasting
             memories. Whether you're seeking a cozy apartment in the heart of
             the city or a luxurious villa overlooking the ocean, we have
             something for everyone. Let us help you find your ideal home sweet
             home.
           </p>
-          <button className="px-4 py-2 bg-[#08ccc4] text-black font-medium text-lg mt-5">
+          <button className="duration-200 px-4 py-2 bg-[#1f6b69] hover:bg-[#133332] text-white font-medium text-lg mt-5 rounded-full">
             View Properties
           </button>
         </div>
@@ -45,17 +45,17 @@ const Home = () => {
           data-aos-duration="1000"
           className="text-center "
         >
-          <h1 className="md:text-4xl text-2xl  font-bold">
+          <h1 className="lg:text-4xl text-2xl  font-bold text-white">
             Our Choice Of Popular Residential
           </h1>
-          <p className="my-3 text-[#0000008f] w-3/4 mx-auto">
+          <p className="my-3 text-[#ffffff8f] w-3/4 mx-auto">
             "Top Picks for Living" - Our curated selection highlights prime
             residential locales, emphasizing convenience, security, and quality
             amenities, ensuring an optimal living experience.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5 mt-10 xl:px-20 md:px-10 px-5">
+        <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5 mt-10 px-8">
           {allResidential.map((card) => (
             <Card key={card.id} card={card}></Card>
           ))}

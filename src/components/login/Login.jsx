@@ -8,7 +8,9 @@ import { AwesomeButton } from "react-awesome-button";
 import "react-awesome-button/dist/styles.css";
 import loginImg from "../../assets/images/171.jpg";
 import { Helmet } from "react-helmet-async";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
 
 const Login = () => {
   const { signInUser, googleLogin, githubLogin } = useContext(Tower);
@@ -53,18 +55,23 @@ const Login = () => {
   };
 
   return (
-    <div className="mt-10">
+    <div data-aos="fade-down" data-aos-duration="1000" className="mt-10 p-5">
       <Helmet>
         <title>New Home-Login</title>
       </Helmet>
-      <div className="text-center lg:text-left">
+      <div className="text-center lg:text-left text-white">
         <h1 className="text-3xl font-bold text-center">Login Now!</h1>
       </div>
 
       <div className="flex md:flex-row-reverse flex-col sm:flex-col p-9 border mt-5 rounded-lg gap-5">
         <div className=" flex-1">
-          <div className=" border-2 mt-5 pb-5 rounded-lg bg-[#effbff]">
-            <form onSubmit={handleLogin} className="card-body">
+          <div className=" border-2 mt-5 pb-5 rounded-lg bg-[#09191f]">
+            <form
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+              onSubmit={handleLogin}
+              className="card-body "
+            >
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Email</span>
@@ -73,7 +80,7 @@ const Login = () => {
                   type="email"
                   name="email"
                   placeholder="Email"
-                  className="input input-bordered"
+                  className="input input-bordered bg-[#0f3338]"
                   required
                 />
               </div>
@@ -85,7 +92,7 @@ const Login = () => {
                   type="password"
                   name="password"
                   placeholder="Password"
-                  className="input input-bordered"
+                  className="input input-bordered bg-[#0f3338]"
                   required
                 />
                 <label className="label">
@@ -100,7 +107,7 @@ const Login = () => {
                 </AwesomeButton>
               </div>
             </form>
-            <p className="label-text-alt text-center ">
+            <p className="label-text-alt text-center text-white">
               Don't have an account? Please{" "}
               <span className="link font-bold text-blue-500">
                 <Link to="/register">Register</Link>
@@ -110,7 +117,7 @@ const Login = () => {
 
           <div className=" flex flex-col justify-center items-center gap-2 mt-5 ">
             <div className="flex flex-col w-2/4 border-opacity-50">
-              <div className="divider">OR</div>
+              <div className="divider text-white">OR</div>
             </div>
 
             <p className="w-full" onClick={continueWithGoogle}>

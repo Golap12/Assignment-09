@@ -42,7 +42,7 @@ const SwiperHero = () => {
         }}
         modules={[Autoplay, Pagination, EffectCreative, EffectFade]}
         loop={true}
-        className="mySwiper  w-[98%] h-[500px] rounded-"
+        className="mySwiper  w-[98%] h-[500px] rounded-lg"
       >
         <SwiperSlide className="">
           <div className=""
