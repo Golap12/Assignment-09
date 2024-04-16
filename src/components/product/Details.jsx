@@ -37,7 +37,7 @@ const Details = () => {
 
 
   return (
-    <div className="mt-10 px-5 space-y-5 text-[#ffffffb6]">
+    <div className="mt-10 px-5 space-y-5">
       <Helmet>
         <title>New Home-Details</title>
       </Helmet>
@@ -45,7 +45,7 @@ const Details = () => {
         {/* title */}
       <div className="md:flex justify-between items-center">
         <div className="space-y-3">
-          <p className="md:text-4xl text-xl font-extrabold text-white">{estate_title}</p>
+          <p className="md:text-4xl text-xl font-extrabold ">{estate_title}</p>
           <div className="flex items-center gap-2 flex-wrap">
             <p className="flex gap-2">
               <MdOutlineBedroomParent
@@ -147,7 +147,7 @@ const Details = () => {
           </div>
 
 
-          <div  data-aos="flip-left" data-aos-duration="1000" className="bg-[#0f2b35] p-5 flex-1 flex flex-col items-center shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]">
+          <div  data-aos="flip-left" data-aos-duration="1000" className=" bg-slate-100 p-5 flex-1 flex flex-col items-center shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]">
             <h1 className="md:text-3xl text-xl font-bold text-[#08ccc4]">Get In Touch</h1>
 
              <div className="border border-dashed w-2/4 my-3"></div>
@@ -158,21 +158,21 @@ const Details = () => {
                         <label className="label">
                             <span className="label-text">NAME</span>
                         </label>
-                        <input type="text" name="name" placeholder="Name" className="border px-5 py-3 outline-none input-bordered bg-[#0f3338]" required />
+                        <input type="text" name="name" placeholder="Name" className="border px-5 py-3 outline-none input-bordered bg-[#fff]" required />
                     </div>
 
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">EMAIL</span>
                         </label>
-                        <input type="email" name="email" placeholder="Email" className="border px-5 py-3 outline-none input-bordered bg-[#0f3338]" required />
+                        <input type="email" name="email" placeholder="Email" className="border px-5 py-3 outline-none input-bordered bg-[#fff]" required />
                     </div>
 
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">MESSAGE</span>
                         </label>
-                        <textarea placeholder="YOUR MESSAGE (OPTIONAL)" className="border outline-none textarea-bordered textarea-lg w-full resize-none bg-[#0f3338]" ></textarea>
+                        <textarea placeholder="YOUR MESSAGE (OPTIONAL)" className="border outline-none textarea-bordered textarea-lg w-full resize-none bg-[#fff]" ></textarea>
                     </div>
 
                     <div className="form-control mt-6">

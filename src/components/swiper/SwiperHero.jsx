@@ -47,7 +47,7 @@ const SwiperHero = () => {
         <SwiperSlide className="">
           <div className=""
             style={{
-              backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${img5})`,
+              backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${img5})`,
               backgroundPosition: "center",
               backgroundSize: "cover",
               display: "flex",
@@ -63,7 +63,7 @@ const SwiperHero = () => {
         <SwiperSlide className="">
           <div className=""
             style={{
-              backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${img6})`,
+              backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${img6})`,
               backgroundPosition: "center",
               backgroundSize: "cover",
               display: "flex",
@@ -79,7 +79,7 @@ const SwiperHero = () => {
         <SwiperSlide className="">
           <div className=""
             style={{
-              backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${img4})`,
+              backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${img4})`,
               backgroundPosition: "center",
               backgroundSize: "cover",
               display: "flex",
@@ -95,7 +95,7 @@ const SwiperHero = () => {
         <SwiperSlide className="">
           <div className=""
             style={{
-              backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${img7})`,
+              backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${img7})`,
               backgroundPosition: "center",
               backgroundSize: "cover",
               display: "flex",
@@ -111,7 +111,7 @@ const SwiperHero = () => {
         <SwiperSlide className="">
           <div className=""
             style={{
-              backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${img8})`,
+              backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${img8})`,
               backgroundPosition: "center",
               backgroundSize: "cover",
               display: "flex",

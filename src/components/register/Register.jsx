@@ -73,7 +73,7 @@ const Register = () => {
     <div
       data-aos="fade-down"
       data-aos-duration="1000"
-      className="mt-10 p-5 text-white "
+      className="mt-10 p-5"
     >
       <Helmet>
         <title>New Home-Register</title>
@@ -83,8 +83,8 @@ const Register = () => {
         <h1 className="text-3xl font-bold text-center">Create An Account!</h1>
       </div>
 
-      <div className=" flex sm:flex-col md:flex-row-reverse mt-5 md:p-9 p-4 gap-5 space-y-5  border rounded-lg">
-        <div className="flex-1 border-2 rounded-lg bg-[#09191f]">
+      <div className=" flex flex-col md:flex-row-reverse mt-5 md:p-9 p-4 gap-5 space-y-5 border rounded-lg">
+        <div className="flex-1 border-2 rounded-lg bg-slate-100 shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]">
           <h1 className="text-center text-xl md:text-3xl font-bold mt-10">
             Provide Your Information
           </h1>
@@ -98,51 +98,51 @@ const Register = () => {
           >
             <div className="form-control">
               <label className="label">
-                <span className="label-text text-white">Name</span>
+                <span className="label-text">Name</span>
               </label>
               <input
                 type="text"
                 name="name"
                 placeholder="Name"
-                className="input input-bordered bg-[#0f3338]"
+                className="input input-bordered "
                 required
               />
             </div>
 
             <div className="form-control">
               <label className="label">
-                <span className="label-text text-white">Email</span>
+                <span className="label-text">Email</span>
               </label>
               <input
                 type="email"
                 name="email"
                 placeholder="Email"
-                className="input input-bordered bg-[#0f3338]"
+                className="input input-bordered"
                 required
               />
             </div>
 
             <div className="form-control">
               <label className="label">
-                <span className="label-text text-white">Photo URL (optional)</span>
+                <span className="label-text">Photo URL (optional)</span>
               </label>
               <input
                 type="text"
                 name="photoUrl"
                 placeholder="Photo Url"
-                className="input input-bordered bg-[#0f3338]"
+                className="input input-bordered"
               />
             </div>
 
             <div className="form-control relative">
               <label className="label">
-                <span className="label-text text-white">Password</span>
+                <span className="label-text">Password</span>
               </label>
               <input
                 type={showPassword ? "text" : "password"}
                 name="password"
                 placeholder="Password"
-                className="input input-bordered bg-[#0f3338]"
+                className="input input-bordered"
                 required
               />
 
@@ -170,7 +170,7 @@ const Register = () => {
             </div>
           </form>
 
-          <p className="label-text-alt text-center mb-4 text-white">
+          <p className="label-text-alt text-center mb-4 ">
             Already have an account? Please{" "}
             <span className="link font-bold text-blue-500">
               <Link to="/login">Login</Link>

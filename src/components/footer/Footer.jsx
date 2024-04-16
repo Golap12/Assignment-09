@@ -5,7 +5,7 @@ AOS.init();
 
 const Footer = () => {
     return (
-        <footer className="mt-10 divide-y bg-[#000f13] rounded-t-[70px] text-[#a0a0a0]">
+        <footer className="mt-10 divide-y bg-slate-200 rounded-t-[70px]">
             <div className=" container px-4 flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
                 <div data-aos="fade-right" data-aos-duration="1000" className="lg:w-1/3">
                     <a rel="noopener noreferrer" href="#" className="flex justify-center space-x-3 lg:justify-start">
@@ -21,7 +21,7 @@ const Footer = () => {
 
                 <div className="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">
                     <div className="space-y-3">
-                        <h3 data-aos="fade-down" data-aos-duration="1000" className="tracking-wide uppercase text-white text-xl font-bold">Product</h3>
+                        <h3 data-aos="fade-down" data-aos-duration="1000" className="tracking-wide uppercase text-xl font-bold">Product</h3>
                         <ul className="space-y-1">
                             <li data-aos="flip-right" data-aos-duration="1000">
                                 <a rel="noopener noreferrer" href="#">Features</a>
@@ -38,7 +38,7 @@ const Footer = () => {
                         </ul>
                     </div>
                     <div className="space-y-3">
-                        <h3 data-aos="fade-down" data-aos-duration="1000" className="tracking-wide uppercase text-white text-xl font-bold">Company</h3>
+                        <h3 data-aos="fade-down" data-aos-duration="1000" className="tracking-wide uppercase  text-xl font-bold">Company</h3>
                         <ul className="space-y-1">
                             <li data-aos="flip-left" data-aos-duration="1000">
                                 <a rel="noopener noreferrer" href="#">Privacy</a>
@@ -49,7 +49,7 @@ const Footer = () => {
                         </ul>
                     </div>
                     <div className="space-y-3">
-                        <h3 data-aos="fade-down" data-aos-duration="1000" className="uppercase text-white text-xl font-bold">Developers</h3>
+                        <h3 data-aos="fade-down" data-aos-duration="1000" className="uppercase  text-xl font-bold">Developers</h3>
                         <ul className="space-y-1">
                             <li data-aos="flip-right" data-aos-duration="1000">
                                 <a rel="noopener noreferrer" href="#">Public API</a>
@@ -63,7 +63,7 @@ const Footer = () => {
                         </ul>
                     </div>
                     <div className="space-y-3">
-                        <div data-aos="fade-down" data-aos-duration="1000" className="uppercase text-white text-xl font-bold">Social media</div>
+                        <div data-aos="fade-down" data-aos-duration="1000" className="uppercase  text-xl font-bold">Social media</div>
                         <div data-aos="fade-right" data-aos-duration="1000" className="flex justify-start space-x-3">
                             <a rel="noopener noreferrer" href="#" title="Facebook" className="flex items-center p-1">
                                 <svg color='#3b5998' xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 32 32" className="w-5 h-5 fill-current">
@@ -84,7 +84,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className="py-5 text-sm text-center bg-[#000f13]">© 1968 Company Co. All rights reserved.</div>
+            <div className="py-5 text-sm text-center bg-slate-400">© 1968 Company Co. All rights reserved.</div>
         </footer>
     );
 };

@@ -2,7 +2,7 @@
 import { useContext } from "react";
 import { Tower } from "../../providers/AuthProvider";
 import { Navigate, useLocation } from "react-router-dom";
-import "react-loading-skeleton/dist/skeleton.css";
+
 
 const PrivetRoute = ({ children }) => {
   const location = useLocation();

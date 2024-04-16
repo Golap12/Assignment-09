@@ -35,7 +35,7 @@ const Profile = () => {
   };
 
   return (
-    <div className="text-center p-5 text-white">
+    <div className="text-center p-5">
       <Helmet>
         <title>New Home-Profile</title>
       </Helmet>
@@ -92,16 +92,16 @@ const Profile = () => {
           </div>
         </div>
 
-        <div className=" flex-1 border border-[#08ccc4] mt-5 pb-5 rounded-lg">
-          <h1 className=" text-yellow-300 mt-5 text-sm">
+        <div className=" flex-1 border mt-5 pb-5 bg-slate-100 shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] rounded-lg">
+          <h1 className=" text-yellow-600 mt-5 text-sm">
             <span className=" text-lg font-bold ">Note :</span>{" "}
-            <span className="text-gray-400">
+            <span className="">
               You Can Only Edit Your Name And Photo URL
             </span>
           </h1>
           <form
             onSubmit={handleUpdateProfile}
-            className="md:mt-10 mt-5 px-5 text-white"
+            className="md:mt-10 mt-5 px-5 "
           >
             <div
               data-aos="fade-left"
@@ -109,7 +109,7 @@ const Profile = () => {
               className="form-control"
             >
               <label className="label">
-                <span className="label-text text-xl font-semibold text-white">
+                <span className="label-text text-xl font-semibold ">
                   Name
                 </span>
               </label>
@@ -119,7 +119,7 @@ const Profile = () => {
                 placeholder={user?.photoURL || "Enter photo URL"}
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                className="input input-bordered bg-[#0f3338]"
+                className="input input-bordered "
               />
             </div>
             <div
@@ -128,7 +128,7 @@ const Profile = () => {
               className="form-control"
             >
               <label className="label">
-                <span className="label-text text-xl font-semibold text-white">
+                <span className="label-text text-xl font-semibold ">
                   Email
                 </span>
               </label>
@@ -138,7 +138,7 @@ const Profile = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder={user?.email}
-                className="input input-bordered bg-[#0f3338]"
+                className="input input-bordered "
               />
             </div>
             <div
@@ -147,7 +147,7 @@ const Profile = () => {
               className="form-control"
             >
               <label className="label">
-                <span className="label-text text-xl font-semibold text-white">
+                <span className="label-text text-xl font-semibold ">
                   Photo URL
                 </span>
               </label>
@@ -157,7 +157,7 @@ const Profile = () => {
                 placeholder={user?.photoURL || "Enter photo URL"}
                 value={photoURL}
                 onChange={(e) => setPhotoURL(e.target.value)}
-                className="input input-bordered bg-[#0f3338]"
+                className="input input-bordered "
               />
             </div>
             <div

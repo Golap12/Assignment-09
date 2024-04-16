@@ -37,16 +37,16 @@ const Faq = () => {
     }
 
     return (
-        <section className="py-10 bg-[#09191f] sm:py-16 lg:py-24">
+        <section className="py-10 bg-gray-50 sm:py-16 lg:py-24">
             <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
                 <div className="max-w-2xl mx-auto text-center">
-                    <h2 className="text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">Frequently Asked Questions</h2>
-                    <p className="max-w-xl mx-auto mt-4 text-base leading-relaxed text-gray-400">Explore some common questions below to get answers about our services.</p>
+                    <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">Frequently Asked Questions</h2>
+                    <p className="max-w-xl mx-auto mt-4 text-base leading-relaxed text-gray-600">Explore some common questions below to get answers about our services.</p>
                 </div>
 
-                <div className="max-w-3xl mx-auto mt-8 space-y-4 md:mt-16 text-white">
+                <div className="max-w-3xl mx-auto mt-8 space-y-4 md:mt-16">
                     {faq.map((item, index) => (
-                        <div key={index} className="transition-all duration-200 bg-[#14595e] border border-gray-6200 cursor-pointer hover:bg-gray-500">
+                        <div key={index} className="transition-all duration-200 bg-white border border-gray-200 cursor-pointer hover:bg-gray-50">
                             <button type="button" className="flex items-center justify-between w-full px-4 py-5 sm:p-6" onClick={() => toggleFaq(index)}>
                                 <span className="flex text-lg font-semibold text-black"> {item.question} </span>
 
@@ -62,7 +62,7 @@ const Faq = () => {
                     ))}
                 </div>
 
-                <p className="text-center text-gray-400 textbase mt-9">Didn’t find the answer you are looking for? <a href="#" title="" className="font-medium text-cyan-400 transition-all duration-200 hover:text-cyan-600 focus:text-cyan-500 hover:underline">Contact our support</a></p>
+                <p className="text-center text-gray-600 textbase mt-9">Didn’t find the answer you are looking for? <a href="#" title="" className="font-medium text-blue-600 transition-all duration-200 hover:text-blue-700 focus:text-blue-700 hover:underline">Contact our support</a></p>
             </div>
         </section>
     );

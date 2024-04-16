@@ -59,13 +59,13 @@ const Login = () => {
       <Helmet>
         <title>New Home-Login</title>
       </Helmet>
-      <div className="text-center lg:text-left text-white">
+      <div className="text-center lg:text-left ">
         <h1 className="text-3xl font-bold text-center">Login Now!</h1>
       </div>
 
       <div className="flex md:flex-row-reverse flex-col sm:flex-col p-9 border mt-5 rounded-lg gap-5">
         <div className=" flex-1">
-          <div className=" border-2 mt-5 pb-5 rounded-lg bg-[#09191f]">
+          <div className=" border-2 mt-5 pb-5 rounded-lg bg-slate-100 shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]">
             <form
               data-aos="zoom-in"
               data-aos-duration="1000"
@@ -74,25 +74,25 @@ const Login = () => {
             >
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text text-white">Email</span>
+                  <span className="label-text ">Email</span>
                 </label>
                 <input
                   type="email"
                   name="email"
                   placeholder="Email"
-                  className="input input-bordered text-white bg-[#0f3338]"
+                  className="input input-bordered  "
                   required
                 />
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text text-white">Password</span>
+                  <span className="label-text ">Password</span>
                 </label>
                 <input
                   type="password"
                   name="password"
                   placeholder="Password"
-                  className="input input-bordered text-white bg-[#0f3338]"
+                  className="input input-bordered  "
                   required
                 />
                 <label className="label">
@@ -107,7 +107,7 @@ const Login = () => {
                 </AwesomeButton>
               </div>
             </form>
-            <p className="label-text-alt text-center text-white">
+            <p className="label-text-alt text-center ">
               Don't have an account? Please{" "}
               <span className="link font-bold text-blue-500">
                 <Link to="/register">Register</Link>
@@ -117,7 +117,7 @@ const Login = () => {
 
           <div className=" flex flex-col justify-center items-center gap-2 mt-5 ">
             <div className="flex flex-col w-2/4 border-opacity-50">
-              <div className="divider text-white">OR</div>
+              <div className="divider ">OR</div>
             </div>
 
             <p className="w-full" onClick={continueWithGoogle}>

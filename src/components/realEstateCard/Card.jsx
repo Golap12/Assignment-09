@@ -27,7 +27,7 @@ const Card = ({ card }) => {
     <div
       data-aos="zoom-in"
       data-aos-duration="1000"
-      className="bg-[#153847] flex flex-col shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] rounded-xl"
+      className="bg-slate-100 flex flex-col shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] rounded-xl"
     >
       <div className="p-2 ">
         <img className="w-full rounded-xl" src={image} alt="" />
@@ -36,16 +36,16 @@ const Card = ({ card }) => {
       <div className="p-3 flex flex-col gap-2 ">
         <div className="flex justify-between items-center">
           <p className="text-xl text-[#08CCC4] font-bold">Price: {price}</p>
-          <p className="text-[#ffffffbe] font-medium">Stutus : [{status}]</p>
+          <p className=" font-medium">Stutus : [{status}]</p>
         </div>
 
-        <h2 className="text-2xl font-bold text-[#ffffff]">{segment_name}</h2>
-        <p className="text-[#ffffffab]">
+        <h2 className="text-2xl font-bold ">{segment_name}</h2>
+        <p className="">
           {description.slice(0, 60)}...
           <span className="text-[#08CCC4] cursor-pointer">Read More</span>
         </p>
 
-        <div className="flex gap-5 text-[#ffffffc4]">
+        <div className="flex gap-5 ">
           <div>
             <div className="flex gap-2">
               <span>
