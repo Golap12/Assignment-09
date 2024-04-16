@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Tower } from "./../../providers/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -7,7 +7,7 @@ import { IoEyeOffSharp } from "react-icons/io5";
 import { MdRemoveRedEye } from "react-icons/md";
 import { AwesomeButton } from "react-awesome-button";
 import "react-awesome-button/dist/styles.css";
-import regImg from "../../assets/images/172.jpg";
+import regImg from "../../assets/images/172.png";
 import { Helmet } from "react-helmet-async";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -98,7 +98,7 @@ const Register = () => {
           >
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Name</span>
+                <span className="label-text text-white">Name</span>
               </label>
               <input
                 type="text"
@@ -111,7 +111,7 @@ const Register = () => {
 
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Email</span>
+                <span className="label-text text-white">Email</span>
               </label>
               <input
                 type="email"
@@ -124,7 +124,7 @@ const Register = () => {
 
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Photo Url</span>
+                <span className="label-text text-white">Photo URL (optional)</span>
               </label>
               <input
                 type="text"
@@ -136,7 +136,7 @@ const Register = () => {
 
             <div className="form-control relative">
               <label className="label">
-                <span className="label-text">Password</span>
+                <span className="label-text text-white">Password</span>
               </label>
               <input
                 type={showPassword ? "text" : "password"}

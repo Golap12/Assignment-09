@@ -7,6 +7,8 @@ import Profile from "../components/profile/Profile";
 import Details from "./../components/product/Details";
 import PrivetRoute from "../assets/privetRoute/PrivetRoute";
 import Error from "./../components/error/Error";
+import About from "../components/about/About";
+import Contact from "../components/contact/Contact";
 
 const router = createBrowserRouter([
   {
@@ -36,6 +38,14 @@ const router = createBrowserRouter([
         path: "/profile",
         element: <PrivetRoute><Profile></Profile></PrivetRoute>,
       },
+      {
+        path: "/about",
+        element: <About></About>
+      },
+      {
+        path: "/contact",
+        element: <Contact></Contact>
+      }
     ],
   },
 ]);

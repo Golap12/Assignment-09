@@ -6,7 +6,7 @@ import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
 import { AwesomeButton } from "react-awesome-button";
 import "react-awesome-button/dist/styles.css";
-import loginImg from "../../assets/images/171.jpg";
+import loginImg from "../../assets/images/171.png";
 import { Helmet } from "react-helmet-async";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -74,30 +74,30 @@ const Login = () => {
             >
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Email</span>
+                  <span className="label-text text-white">Email</span>
                 </label>
                 <input
                   type="email"
                   name="email"
                   placeholder="Email"
-                  className="input input-bordered bg-[#0f3338]"
+                  className="input input-bordered text-white bg-[#0f3338]"
                   required
                 />
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Password</span>
+                  <span className="label-text text-white">Password</span>
                 </label>
                 <input
                   type="password"
                   name="password"
                   placeholder="Password"
-                  className="input input-bordered bg-[#0f3338]"
+                  className="input input-bordered text-white bg-[#0f3338]"
                   required
                 />
                 <label className="label">
                   {loginError && (
-                    <small className="text-red-800">{loginError}</small>
+                    <small className="text-red-400">{loginError}</small>
                   )}
                 </label>
               </div>

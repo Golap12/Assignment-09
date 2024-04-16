@@ -25,8 +25,8 @@ const Nav = () => {
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? " md:text-lg text-[12px] p-1 text-[#fff] bg-[#153b47] md:px-3 md:py-2 md:font-medium hover:transition-all border rounded-sm border-[#153b47]"
-              : "hover:transition-all md:text-lg text-[12px] md:px-3 md:py-2 p-1 md:font-medium text-white"
+              ? "md:text-lg text-[12px] p-1 text-[#fff] bg-[#153b47] md:px-3 md:py-2 md:font-medium hover:transition-all border rounded-full border-[#153b47]"
+              : " hover:transition-all md:text-lg text-[12px] md:px-3 md:py-2 p-1 md:font-medium text-white"
           }
           to="/"
         >
@@ -38,7 +38,7 @@ const Nav = () => {
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? "md:text-lg text-[12px] p-1 text-[#fff] bg-[#153b47] md:px-3 md:py-2 md:font-medium hover:transition-all border rounded-sm border-[#153b47]"
+              ? "md:text-lg text-[12px] p-1 text-[#fff] bg-[#153b47] md:px-3 md:py-2 md:font-medium hover:transition-all border rounded-full border-[#153b47]"
               : "hover:transition-all md:text-lg md:px-3 md:py-2 text-[12px] p-1  md:font-medium  text-white"
           }
           to="/profile"
@@ -51,12 +51,25 @@ const Nav = () => {
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? "md:text-lg text-[12px] p-1 text-[#fff] bg-[#153b47] md:px-3 md:py-2 md:font-medium hover:transition-all border rounded-sm border-[#153b47]"
+              ? "md:text-lg text-[12px] p-1 text-[#fff] bg-[#153b47] md:px-3 md:py-2 md:font-medium hover:transition-all border rounded-full border-[#153b47]"
               : "hover:transition-all md:text-lg md:px-3 md:py-2  text-[12px] p-1 md:font-medium  text-white"
           }
-          to="/no"
+          to="/about"
         >
-          No Route
+          About
+        </NavLink>
+      </li>
+
+      <li data-aos="fade-right" data-aos-duration="1000">
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? "md:text-lg text-[12px] p-1 text-[#fff] bg-[#153b47] md:px-3 md:py-2 md:font-medium hover:transition-all border rounded-full border-[#153b47]"
+              : "hover:transition-all md:text-lg md:px-3 md:py-2  text-[12px] p-1 md:font-medium  text-white"
+          }
+          to="/contact"
+        >
+          Contact
         </NavLink>
       </li>
     </>
@@ -196,13 +209,13 @@ const Nav = () => {
 
               <ul
                 data-aos="zoom-in"
-                className="p-2 flex flex-col items-center bg-[#153b47] hover:bg-[#2f6b7e] duration-300 text-center font-bold text-white"
+                className="p-2 flex flex-col items-center bg-[#153b47] hover:bg-[#2f6b7e] duration-300 text-center font-bold text-white rounded-full"
               >
-                <li className="absolute text-gray-600 top-[40px] right-[33px] w-[150px]">
+                <li className="absolute text-gray-600 top-[40px] right-[33px] w-[150px] ">
                   {isHovering ? user.displayName : null}
                 </li>
                 <li>
-                  <button className="-200" onClick={handleLogout}>
+                  <button className="" onClick={handleLogout}>
                     Log Out
                   </button>
                 </li>
@@ -216,7 +229,7 @@ const Nav = () => {
               <span>
                 <FiUser color="#153b47" size={25}></FiUser>
               </span>
-              <span className="px-3 py-1 rounded-sm text-white bg-[#153b47]">
+              <span className="px-3 py-1 rounded-full text-white bg-[#153b47]">
                 Login
               </span>
             </Link>

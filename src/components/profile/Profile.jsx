@@ -1,19 +1,22 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AwesomeButton } from "react-awesome-button";
 import "react-awesome-button/dist/styles.css";
 import { Tower } from "../../providers/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import avatar from "../../assets/images/avatar.jpg";
-/* eslint-disable react/prop-types */
 import AOS from "aos";
-import "aos/dist/aos.css"; // You can also use <link> for styles
+import "aos/dist/aos.css";
 import { Helmet } from "react-helmet-async";
 // ..
 AOS.init();
 
 const Profile = () => {
-  const { user, updateUserProfile } = useContext(Tower);
+  const { user, setUser, updateUserProfile } = useContext(Tower);
+
+  const [name, setName] = useState(user?.displayName || '');
+  const [email, setEmail] = useState(user?.email || '');
+  const [photoURL, setPhotoURL] = useState(user?.photoURL || '');
 
   const handleUpdateProfile = (e) => {
     e.preventDefault();
@@ -24,6 +27,7 @@ const Profile = () => {
 
     updateUserProfile(name, photoURL)
       .then(() => {
+        setUser({displayName:name, photoURL:photoURL});
         console.log("Profile Updated");
         toast("Profile Updated");
       })
@@ -45,8 +49,7 @@ const Profile = () => {
       <hr className="w-2/4 mx-auto mt-5 border border-[#08ccc4] border-dashed" />
 
       <div className="flex gap-5 flex-col lg:flex-row">
-
-      <div className="flex-1 border border-[#08ccc4] mt-5 pb-5 rounded-lg p-5 flex flex-col gap-5 justify-center items-center">
+        <div className="flex-1 border border-[#08ccc4] mt-5 pb-5 rounded-lg p-5 flex flex-col gap-5 justify-center items-center">
           <div data-aos="fade-right" data-aos-duration="1000">
             {user?.photoURL ? (
               <img
@@ -67,8 +70,6 @@ const Profile = () => {
             data-aos-duration="1000"
             className="space-y-2 *:border *:p-2 *:border-[#55c2ca] w-full *:overflow-auto"
           >
-
-
             <p>
               Name :{" "}
               {user?.displayName ? (
@@ -108,12 +109,16 @@ const Profile = () => {
               className="form-control"
             >
               <label className="label">
-                <span className="label-text text-xl font-semibold text-white">Name</span>
+                <span className="label-text text-xl font-semibold text-white">
+                  Name
+                </span>
               </label>
               <input
                 type="text"
                 name="name"
-                placeholder={user?.displayName}
+                placeholder={user?.photoURL || "Enter photo URL"}
+                value={name}
+                onChange={(e) => setName(e.target.value)}
                 className="input input-bordered bg-[#0f3338]"
               />
             </div>
@@ -123,11 +128,15 @@ const Profile = () => {
               className="form-control"
             >
               <label className="label">
-                <span className="label-text text-xl font-semibold text-white">Email</span>
+                <span className="label-text text-xl font-semibold text-white">
+                  Email
+                </span>
               </label>
               <input
                 type="email"
                 name="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 placeholder={user?.email}
                 className="input input-bordered bg-[#0f3338]"
               />
@@ -145,7 +154,9 @@ const Profile = () => {
               <input
                 type="text"
                 name="photoURL"
-                placeholder={user?.photoURL}
+                placeholder={user?.photoURL || "Enter photo URL"}
+                value={photoURL}
+                onChange={(e) => setPhotoURL(e.target.value)}
                 className="input input-bordered bg-[#0f3338]"
               />
             </div>
@@ -160,8 +171,6 @@ const Profile = () => {
             </div>
           </form>
         </div>
-
-        
       </div>
       <ToastContainer />
     </div>
