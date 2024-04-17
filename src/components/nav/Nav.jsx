@@ -1,7 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import { useContext, useState } from "react";
 import { Tower } from "./../../providers/AuthProvider";
-// import logo from "../../assets/images/logo.png";
+import logo from "../../assets/images/logo.png";
 import avatar from "../../assets/images/avatar.jpg";
 import { FiUser } from "react-icons/fi";
 import { PiSignOutFill } from "react-icons/pi";
@@ -21,12 +21,12 @@ const Nav = () => {
 
   const links = (
     <>
-      <li data-aos="fade-left" data-aos-duration="1000">
+      <li >
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? "md:text-lg text-[12px] p-1  md:px-3 md:py-2 bg-slate-200 md:font-medium hover:transition-all border  border-[#153b47]"
-              : " hover:transition-all md:text-lg text-[12px] md:px-3 md:py-2 p-1 md:font-medium 0.5"
+              ? "md:text-lg text-[12px] p-1 hover:transition-all border-b-2 border-cyan-800 text-[#1f6b69] md:font-bold"
+              : "text-[#1f6b69] hover:transition-all md:text-lg text-[12px] p-1 md:font-bold"
           }
           to="/"
         >
@@ -34,12 +34,12 @@ const Nav = () => {
         </NavLink>
       </li>
 
-      <li data-aos="fade-left" data-aos-duration="1000">
+      <li >
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? "md:text-lg text-[12px] p-1  md:px-3 md:py-2 bg-slate-200 md:font-medium hover:transition-all border  border-[#153b47]"
-              : " hover:transition-all md:text-lg text-[12px] md:px-3 md:py-2 p-1 md:font-medium 0.5"
+            ? "md:text-lg text-[12px] p-1 hover:transition-all border-b-2 border-cyan-800 text-[#1f6b69] md:font-bold"
+              : "text-[#1f6b69] hover:transition-all md:text-lg text-[12px] p-1 md:font-bold"
           }
           to="/profile"
         >
@@ -47,12 +47,12 @@ const Nav = () => {
         </NavLink>
       </li>
 
-      <li data-aos="fade-right" data-aos-duration="1000">
+      <li >
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? "md:text-lg text-[12px] p-1  bg-slate-200 md:px-3 md:py-2 md:font-medium hover:transition-all border  border-[#153b47] "
-              : "hover:transition-all md:text-lg md:px-3 md:py-2  text-[12px] p-1 md:font-medium  0.5"
+            ? "md:text-lg text-[12px] p-1 hover:transition-all border-b-2 border-cyan-800 text-[#1f6b69] md:font-bold"
+              : "text-[#1f6b69] hover:transition-all md:text-lg text-[12px] p-1 md:font-bold"
           }
           to="/about"
         >
@@ -60,12 +60,12 @@ const Nav = () => {
         </NavLink>
       </li>
 
-      <li data-aos="fade-right" data-aos-duration="1000">
+      <li >
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? "md:text-lg text-[12px] p-1  bg-slate-50 md:px-3 md:py-2 md:font-medium hover:transition-all border  border-[#153b47]"
-              : "hover:transition-all md:text-lg md:px-3 md:py-2  text-[12px] p-1 md:font-medium  0.5"
+            ? "md:text-lg text-[12px] p-1 hover:transition-all border-b-2 border-cyan-800 text-[#1f6b69] md:font-bold"
+              : "text-[#1f6b69] hover:transition-all md:text-lg text-[12px] p-1 md:font-bold"
           }
           to="/contact"
         >
@@ -97,28 +97,23 @@ const Nav = () => {
             </div>
             <ul
               tabIndex={0}
-              className="backdrop-blur-md rounded-lg bg-[#ffffff47] border dropdown-content mt-3 p-1 w-40 gap-2 nav"
+              className="backdrop-blur-md rounded-lg bg-[#ffffff47] border dropdown-content mt-3 p-1 space-y-2 w-40 gap-2 nav"
             >
               {links}
             </ul>
           </div>
 
           <Link
-            data-aos="fade-right"
+            
             to={"/"}
             className=" text-4xl text-[#131313] font-bold"
           >
-            <h1>
-              <span className="lg:text-4xl font-extrabold text-[#29917e]">
-                New
-              </span>
-              <span className="text-sm font-bold bg-slate-50">Home</span>
-            </h1>
+            <img className="h-[40px]" src={logo} alt="" />
           </Link>
 
           {user ? (
             <div
-              data-aos="fade-left"
+              
               className="md:hidden dropdown dropdown-end flex items-center gap-2"
             >
               <div
@@ -170,13 +165,13 @@ const Nav = () => {
         </div>
 
         <div className="navbar-center hidden lg:flex">
-          <ul className=" menu-horizontal px-1 gap-3 text-sm nav">{links}</ul>
+          <ul className=" menu-horizontal px-1 gap-3 text-sm nav space-x-2">{links}</ul>
         </div>
 
         <div className="navbar-end gap-4 text-sm hidden md:flex ">
           {user ? (
             <div
-              data-aos="fade-left"
+              
               className="dropdown dropdown-end flex items-center gap-2"
             >
               <div
@@ -208,10 +203,10 @@ const Nav = () => {
               </div>
 
               <ul
-                data-aos="zoom-in"
-                className="p-2 flex flex-col items-center bg-slate-300 hover:bg-[#2f6b7e duration-300 text-center font-bold 0.5 "
+                
+                className="p-2 flex flex-col items-center bg-[#1f6b69] hover:bg-[#1f6b694a] hover:text-[#1f6b69] hover:transition-all text-white hover:bg-[#2f6b7e duration-300 text-center font-bold rounded-lg"
               >
-                <li className="absolute  top-[40px] right-[33px] w-[150px] ">
+                <li className="absolute text-gray-600 top-[40px] right-[33px] w-[150px] ">
                   {isHovering ? user.displayName : null}
                 </li>
                 <li>

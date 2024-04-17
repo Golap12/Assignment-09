@@ -57,13 +57,14 @@ const Login = () => {
   return (
     <div data-aos="fade-down" data-aos-duration="1000" className="mt-10 p-5">
       <Helmet>
-        <title>New Home-Login</title>
+        <title>PropertyPulse | Login</title>
       </Helmet>
-      <div className="text-center lg:text-left ">
-        <h1 className="text-3xl font-bold text-center">Login Now!</h1>
+      <div className="text-center">
+        <h1 className="text-3xl font-bold text-center text-[#1f6b69]">Login Now!</h1>
       </div>
+      <hr className="w-1/4 mx-auto mt-5" />
 
-      <div className="flex md:flex-row-reverse flex-col sm:flex-col p-9 border mt-5 rounded-lg gap-5">
+      <div className="flex md:flex-row-reverse flex-col sm:flex-col p-9 mt-5 rounded-lg gap-5 bg-[#2eaeaa1d]">
         <div className=" flex-1">
           <div className=" border-2 mt-5 pb-5 rounded-lg bg-slate-100 shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]">
             <form
@@ -140,7 +141,7 @@ const Login = () => {
           </div>
         </div>
 
-        <div className="flex-1 mt-5">
+        <div className="flex-1 mt-5 ">
           <img src={loginImg} alt="" />
         </div>
       </div>

@@ -16,46 +16,46 @@ const Home = () => {
   return (
     <div className="">
       <Helmet>
-        <title>New Home-Home</title>
+        <title>PropertyPulse | Home</title>
       </Helmet>
 
       
       <div className="md:mt-10 mt-[0.5rem] relative">
         <SwiperHero></SwiperHero>
         <div className="absolute md:top-[100px] top-[50px] left-[10%] md:w-3/4 w-3/4 duration-300  ">
-          <h1 className="text-5xl font-extrabold md:w-2/4 text-white">
+          <h1 data-aos="fade-down" data-aos-duration="1000" className="lg:text-5xl text-3xl font-extrabold md:w-2/4 text-[#4dece6]">
             Welcome to Your Dream Home
           </h1>
-          <p className="mt-5 text-[#ffffffb6]">
+          <p data-aos="fade-up" data-aos-duration="1000" className="mt-5 text-[#ffffffb6] lg:w-2/4">
             Find the perfect property for your lifestyle and create lasting
             memories. Whether you're seeking a cozy apartment in the heart of
             the city or a luxurious villa overlooking the ocean, we have
             something for everyone. Let us help you find your ideal home sweet
             home.
           </p>
-          <button className="duration-200 px-4 py-2 text-white bg-[#1f6b69] hover:bg-[#133332]  font-medium text-lg mt-5 rounded-full">
-            View Properties
+          <button data-aos="zoom-out-up" data-aos-duration="1000" className="duration-200 px-4 py-2 text-white bg-[#1f6b69] hover:bg-[#133332]  font-medium text-lg mt-5 rounded-lg">
+            <a href="#card">View Properties</a>
           </button>
         </div>
       </div>
 
-      <div className=" rounded-lg py-10 md:mt-14">
+      <div id="card" className=" rounded-lg py-10 md:mt-14">
         <div
           data-aos="fade-down"
           data-aos-duration="1000"
           className="text-center "
         >
-          <h1 className="lg:text-4xl text-2xl  font-bold ">
+          <h1 className="lg:text-4xl text-2xl  font-bold text-[#1f6b69]">
             Our Choice Of Popular Residential
           </h1>
-          <p className="my-3 w-3/4 mx-auto">
+          <p className="my-3 w-3/4 mx-auto text-[#1f6b69bc]">
             "Top Picks for Living" - Our curated selection highlights prime
             residential locales, emphasizing convenience, security, and quality
             amenities, ensuring an optimal living experience.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5 mt-10 px-8">
+        <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5 mt-10 p-8 rounded-xl">
           {allResidential.map((card) => (
             <Card key={card.id} card={card}></Card>
           ))}
@@ -70,7 +70,6 @@ const Home = () => {
       <div>
         <Faq></Faq>
       </div>
-
 
     </div>
   );

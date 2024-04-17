@@ -7,9 +7,9 @@ import "react-toastify/dist/ReactToastify.css";
 import avatar from "../../assets/images/avatar.jpg";
 import AOS from "aos";
 import "aos/dist/aos.css";
+AOS.init();
 import { Helmet } from "react-helmet-async";
 // ..
-AOS.init();
 
 const Profile = () => {
   const { user, setUser, updateUserProfile } = useContext(Tower);
@@ -27,7 +27,7 @@ const Profile = () => {
 
     updateUserProfile(name, photoURL)
       .then(() => {
-        setUser({displayName:name, photoURL:photoURL});
+        setUser({...user, displayName:name, photoURL:photoURL});
         console.log("Profile Updated");
         toast("Profile Updated");
       })
@@ -35,21 +35,23 @@ const Profile = () => {
   };
 
   return (
-    <div className="text-center p-5">
+    <div className="text-center p-5 ">
       <Helmet>
-        <title>New Home-Profile</title>
+        <title>PropertyPulse | Profile</title>
       </Helmet>
       <h1
         data-aos="flip-up"
         data-aos-duration="1000"
-        className="md:text-4xl text-2xl font-bold mt-10"
+        className="md:text-4xl text-2xl font-bold mt-10 text-[#1f6b69]"
       >
         Update Your Profile
       </h1>
-      <hr className="w-2/4 mx-auto mt-5 border border-[#08ccc4] border-dashed" />
+      <hr className="w-2/4 mx-auto mt-5 border border-dashed" />
 
       <div className="flex gap-5 flex-col lg:flex-row">
-        <div className="flex-1 border border-[#08ccc4] mt-5 pb-5 rounded-lg p-5 flex flex-col gap-5 justify-center items-center">
+        <div data-aos="zoom-in-left"
+              data-aos-duration="1000" className="bg-[#1f6b6918] flex-1 mt-5 pb-5 rounded-lg p-5 flex flex-col gap-5 justify-center items-center">
+          <h1 className="text-2xl font-bold">Hi <span className="text-[#246367]">{user.displayName}</span></h1>
           <div data-aos="fade-right" data-aos-duration="1000">
             {user?.photoURL ? (
               <img
@@ -68,7 +70,7 @@ const Profile = () => {
           <div
             data-aos="fade-right"
             data-aos-duration="1000"
-            className="space-y-2 *:border *:p-2 *:border-[#55c2ca] w-full *:overflow-auto"
+            className="space-y-2 *:bg-white *:p-2 w-full *:overflow-auto"
           >
             <p>
               Name :{" "}
@@ -92,7 +94,8 @@ const Profile = () => {
           </div>
         </div>
 
-        <div className=" flex-1 border mt-5 pb-5 bg-slate-100 shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] rounded-lg">
+        <div data-aos="zoom-in-right"
+              data-aos-duration="1000" className=" flex-1 border mt-5 pb-5 bg-slate-100 shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] rounded-lg">
           <h1 className=" text-yellow-600 mt-5 text-sm">
             <span className=" text-lg font-bold ">Note :</span>{" "}
             <span className="">
@@ -137,7 +140,7 @@ const Profile = () => {
                 name="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder={user?.email}
+                placeholder={user?.email || "Enter Your Email"}
                 className="input input-bordered "
               />
             </div>
@@ -161,8 +164,7 @@ const Profile = () => {
               />
             </div>
             <div
-              data-aos="flip-up"
-              data-aos-duration="1000"
+              
               className="form-control mt-6"
             >
               <AwesomeButton type="primary">

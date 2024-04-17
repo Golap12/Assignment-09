@@ -76,14 +76,15 @@ const Register = () => {
       className="mt-10 p-5"
     >
       <Helmet>
-        <title>New Home-Register</title>
+        <title>PropertyPulse | Register</title>
       </Helmet>
 
       <div className="text-center lg:text-left">
-        <h1 className="text-3xl font-bold text-center">Create An Account!</h1>
+        <h1 className="text-3xl font-bold text-center text-[#1f6b69]">Create An Account!</h1>
       </div>
+      <hr className="w-1/4 mx-auto mt-5" />
 
-      <div className=" flex flex-col md:flex-row-reverse mt-5 md:p-9 p-4 gap-5 space-y-5 border rounded-lg">
+      <div className=" flex flex-col md:flex-row-reverse mt-5 md:p-9 p-4 gap-5 space-y-5 border rounded-lg bg-[#2eaeaa1d]">
         <div className="flex-1 border-2 rounded-lg bg-slate-100 shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]">
           <h1 className="text-center text-xl md:text-3xl font-bold mt-10">
             Provide Your Information

@@ -20,7 +20,7 @@ import "swiper/css/bundle";
 
 const SwiperHero = () => {
   return (
-    <div data-aos="flip-up" data-aos-duration="1000" className="">
+    <div data-aos="zoom-in" data-aos-duration="1000" className="">
       <Swiper
         grabCursor={true}
         effect={"fade"}
