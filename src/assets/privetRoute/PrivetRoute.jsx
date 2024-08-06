@@ -10,7 +10,7 @@ const PrivetRoute = ({ children }) => {
 
   if (loading) {
     return (
-      <div className="">
+      <div className="loading">
         <div
           role="status"
           className=" p-4 border border-gray-200 rounded shadow animate-pulse md:p-6 dark:border-gray-700"

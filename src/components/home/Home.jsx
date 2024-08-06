@@ -20,10 +20,10 @@ const Home = () => {
       </Helmet>
 
       
-      <div className="md:mt-10 mt-[0.5rem] relative">
+      <div className="mt-10 relative">
         <SwiperHero></SwiperHero>
-        <div className="absolute md:top-[100px] top-[50px] left-[10%] md:w-3/4 w-3/4 duration-300  ">
-          <h1 data-aos="fade-down" data-aos-duration="1000" className="lg:text-5xl text-3xl font-extrabold md:w-2/4 text-[#4dece6]">
+        <div className="absolute md:top-[100px] top-[100px] md:left-[10%] left-[5%] md:w-3/4 w-[90%] duration-300  ">
+          <h1 data-aos="fade-down" data-aos-duration="1000" className="xl:text-5xl lg:text-4xl md:text-3xl text-3xl font-extrabold md:w-2/4 text-[#4dece6] w-full">
             Welcome to Your Dream Home
           </h1>
           <p data-aos="fade-up" data-aos-duration="1000" className="mt-5 text-[#ffffffb6] lg:w-2/4">
@@ -39,7 +39,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div id="card" className=" rounded-lg py-10 md:mt-14">
+      <div id="card" className=" rounded-lg py-5 md:mt-16 mt-10">
         <div
           data-aos="fade-down"
           data-aos-duration="1000"
@@ -48,14 +48,14 @@ const Home = () => {
           <h1 className="lg:text-4xl text-2xl  font-bold text-[#1f6b69]">
             Our Choice Of Popular Residential
           </h1>
-          <p className="my-3 w-3/4 mx-auto text-[#1f6b69bc]">
+          <p className="my-3 md:w-3/4 mx-auto text-[#1f6b69bc]">
             "Top Picks for Living" - Our curated selection highlights prime
             residential locales, emphasizing convenience, security, and quality
             amenities, ensuring an optimal living experience.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5 mt-10 p-8 rounded-xl">
+        <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5 mt-5 p-5 rounded-xl">
           {allResidential.map((card) => (
             <Card key={card.id} card={card}></Card>
           ))}

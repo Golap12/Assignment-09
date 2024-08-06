@@ -10,11 +10,11 @@ const Testimonial = () => {
             <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
                 <div className="flex flex-col items-center">
                     <div className="text-center">
-                        <h2 data-aos="fade-left"
-                                data-aos-duration="1000" className="mb-4 text-3xl font-bold sm:text-4xl xl:text-5xl text-[#1f6b69]">
+                        <h2 data-aos="fade-up"
+                                data-aos-duration="1000" className="mb-4 text-2xl font-bold sm:text-4xl xl:text-5xl text-[#1f6b69]">
                             Our happy clients say about us
                         </h2>
-                        <p data-aos="fade-right"
+                        <p data-aos="fade-down"
                                 data-aos-duration="1000" className="text-lg font-medium text-[#1f6b69bc]">
                             2,157 people have said how good Rareblocks
                         </p>
@@ -42,7 +42,7 @@ const Testimonial = () => {
                         </div>
 
                         <div className="relative grid max-w-lg grid-cols-1 gap-6 mx-auto md:max-w-none lg:gap-10 md:grid-cols-3">
-                            <div data-aos="zoom-in-left"
+                            <div data-aos="zoom-out"
                                 data-aos-duration="1000" className="flex flex-col overflow-hidden shadow-xl">
                                 <div className="flex flex-col justify-between flex-1 p-6 bg-white lg:py-8 lg:px-7">
                                     <div className="flex-1">
@@ -136,7 +136,7 @@ const Testimonial = () => {
                                 </div>
                             </div>
 
-                            <div data-aos="zoom-in-right"
+                            <div data-aos="zoom-out"
                                 data-aos-duration="1000" className="flex flex-col overflow-hidden shadow-xl">
                                 <div className="flex flex-col justify-between flex-1 p-6 bg-white lg:py-8 lg:px-7">
                                     <div className="flex-1">

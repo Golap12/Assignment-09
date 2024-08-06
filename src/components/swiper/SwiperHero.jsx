@@ -60,6 +60,7 @@ const SwiperHero = () => {
             }}>
           </div>
         </SwiperSlide>
+
         <SwiperSlide className="">
           <div className=""
             style={{
@@ -76,6 +77,7 @@ const SwiperHero = () => {
             }}>
           </div>
         </SwiperSlide>
+
         <SwiperSlide className="">
           <div className=""
             style={{
@@ -92,6 +94,7 @@ const SwiperHero = () => {
             }}>
           </div>
         </SwiperSlide>
+
         <SwiperSlide className="">
           <div className=""
             style={{
@@ -108,6 +111,7 @@ const SwiperHero = () => {
             }}>
           </div>
         </SwiperSlide>
+
         <SwiperSlide className="">
           <div className=""
             style={{
@@ -124,6 +128,7 @@ const SwiperHero = () => {
             }}>
           </div>
         </SwiperSlide>
+        
       </Swiper>
     </div>
   );

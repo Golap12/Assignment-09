@@ -21,12 +21,12 @@ const Nav = () => {
 
   const links = (
     <>
-      <li >
+      <li className="hover:-translate-y-2 hover:ease-in duration-300">
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? "md:text-lg text-[12px] p-1 hover:transition-all border-b-2 border-cyan-800 text-[#1f6b69] md:font-bold"
-              : "text-[#1f6b69] hover:transition-all md:text-lg text-[12px] p-1 md:font-bold"
+              ? "md:text-lg text-[12px] p-1 border-b-2 border-cyan-500 text-[#1f6b69] md:font-bold"
+              : "text-[#1f6b69] md:text-lg text-[12px] p-1 md:font-bold hover:text-[#5fd1cd] hover:ease-in duration-300"
           }
           to="/"
         >
@@ -34,12 +34,12 @@ const Nav = () => {
         </NavLink>
       </li>
 
-      <li >
+      <li className="hover:-translate-y-2 hover:ease-in duration-300 ">
         <NavLink
           className={({ isActive }) =>
             isActive
-            ? "md:text-lg text-[12px] p-1 hover:transition-all border-b-2 border-cyan-800 text-[#1f6b69] md:font-bold"
-              : "text-[#1f6b69] hover:transition-all md:text-lg text-[12px] p-1 md:font-bold"
+              ? "md:text-lg text-[12px] p-1 border-b-2 border-cyan-500 text-[#1f6b69] md:font-bold"
+              : "text-[#1f6b69] md:text-lg text-[12px] p-1 md:font-bold hover:text-[#5fd1cd] hover:ease-in duration-300"
           }
           to="/profile"
         >
@@ -47,12 +47,12 @@ const Nav = () => {
         </NavLink>
       </li>
 
-      <li >
+      <li className="hover:-translate-y-2 hover:ease-in duration-300">
         <NavLink
           className={({ isActive }) =>
             isActive
-            ? "md:text-lg text-[12px] p-1 hover:transition-all border-b-2 border-cyan-800 text-[#1f6b69] md:font-bold"
-              : "text-[#1f6b69] hover:transition-all md:text-lg text-[12px] p-1 md:font-bold"
+              ? "md:text-lg text-[12px] p-1 border-b-2 border-cyan-500 text-[#1f6b69] md:font-bold "
+              : "text-[#1f6b69] md:text-lg text-[12px] p-1 md:font-bold hover:text-[#5fd1cd] hover:ease-in duration-300"
           }
           to="/about"
         >
@@ -60,12 +60,12 @@ const Nav = () => {
         </NavLink>
       </li>
 
-      <li >
+      <li className="hover:-translate-y-2 hover:ease-in duration-300">
         <NavLink
           className={({ isActive }) =>
             isActive
-            ? "md:text-lg text-[12px] p-1 hover:transition-all border-b-2 border-cyan-800 text-[#1f6b69] md:font-bold"
-              : "text-[#1f6b69] hover:transition-all md:text-lg text-[12px] p-1 md:font-bold"
+              ? "md:text-lg text-[12px] p-1 border-b-2 border-cyan-500 text-[#1f6b69] md:font-bold "
+              : "text-[#1f6b69] md:text-lg text-[12px] p-1 md:font-bold hover:text-[#5fd1cd] hover:ease-in duration-300"
           }
           to="/contact"
         >
@@ -76,72 +76,51 @@ const Nav = () => {
   );
 
   return (
-      <div className=" flex items-center p-3 md:p-5 sticky top-0 z-10 shadow-lg bg-slate-100">
-        <div className="navbar-start items-center lg:justify-start justify-between flex w-full md:w-[50%]">
-          <div className="dropdown">
-            <div tabIndex={0} role="button" className=" lg:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-8 w-8 0.5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h8m-8 6h16"
-                />
-              </svg>
-            </div>
-            <ul
-              tabIndex={0}
-              className="backdrop-blur-md rounded-lg bg-[#ffffff47] border dropdown-content mt-3 p-1 space-y-2 w-40 gap-2 nav"
+    <div className=" flex items-center p-3 md:p-5 sticky top-0  z-10 shadow-lg bg-slate-100">
+      <div className="navbar-start items-center lg:justify-start justify-between flex w-full md:w-[50%]">
+        <div className="dropdown">
+          <div tabIndex={0} role="button" className=" lg:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-8 w-8 0.5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
             >
-              {links}
-            </ul>
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h8m-8 6h16"
+              />
+            </svg>
           </div>
-
-          <Link
-            
-            to={"/"}
-            className=" text-4xl text-[#131313] font-bold"
+          <ul
+            tabIndex={0}
+            className="md:backdrop-blur-md backdrop-blur-md bg-[#ffffff47] border dropdown-content md:mt-7 mt-3 p-1 space-y-2 w-screen md:w-[99vw] ml-[-15px] gap-2 nav"
           >
-            <img className="h-[40px]" src={logo} alt="" />
-          </Link>
+            {links}
+          </ul>
+        </div>
 
-          {user ? (
-            <div
-              
-              className="md:hidden dropdown dropdown-end flex items-center gap-2"
-            >
-              <div
-                tabIndex={0}
-                role="button"
-                className="btn btn-ghost btn-circle avatar"
-              >
+        <Link
+          to={"/"}
+          className=" text-4xl text-[#131313] font-bold">
+          <img className="h-[40px]" src={logo} alt="" />
+        </Link>
+
+        {
+          user ?
+            <div className="md:hidden dropdown dropdown-end flex items-center gap-2">
+              <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                 <div className="w-10 rounded-full  border-2">
-                  {user?.photoURL ? (
-                    <img
-                      onMouseEnter={() => setIsHovering(true)}
-                      onMouseLeave={() => setIsHovering(false)}
-                      alt=""
-                      src={user.photoURL}
-                    />
-                  ) : (
-                    <img
-                      onMouseEnter={() => setIsHovering(true)}
-                      onMouseLeave={() => setIsHovering(false)}
-                      alt=""
-                      src={avatar}
-                    />
-                  )}
+                  {user?.photoURL ? <img onMouseEnter={() => setIsHovering(true)} onMouseLeave={() => setIsHovering(false)} alt="" src={user.photoURL} /> : <img alt="" src={avatar} />}
+                   
                 </div>
               </div>
 
               <ul className=" flex flex-col items-center text-center">
-                <li className="absolute top-12 right-[15px] w-full text-[10px] font-semibold">
+                <li className="absolute top-[42px] right-[15px] w-full text-[10px] font-semibold">
                   {isHovering ? user.displayName : null}
                 </li>
                 <li>
@@ -151,86 +130,78 @@ const Nav = () => {
                 </li>
               </ul>
             </div>
-          ) : (
-            <Link
-              to={"/login"}
-              className="md:hidden  font-semibold flex items-center gap-2"
-            >
-              <span>
-                <FiUser size={0}></FiUser>
-              </span>
-              <span>Login</span>
+            :
+            <Link to={"/login"} className="md:hidden  font-semibold flex items-center gap-2">
+              <span> <FiUser size={0}></FiUser></span><span>Login</span>
             </Link>
-          )}
-        </div>
+        }
+      </div>
 
-        <div className="navbar-center hidden lg:flex">
-          <ul className=" menu-horizontal px-1 gap-3 text-sm nav space-x-2">{links}</ul>
-        </div>
+      <div className="navbar-center hidden lg:flex">
+        <ul className="menu-horizontal px-1 gap-3 text-sm nav space-x-2">
+          {links}
+        </ul>
+      </div>
 
-        <div className="navbar-end gap-4 text-sm hidden md:flex ">
-          {user ? (
+      <div className="navbar-end gap-4 text-sm hidden md:flex ">
+        {user ? (
+          <div
+
+            className="dropdown dropdown-end flex items-center gap-2"
+          >
             <div
-              
-              className="dropdown dropdown-end flex items-center gap-2"
+              tabIndex={0}
+              role="button"
+              className="btn btn-ghost btn-circle avatar"
             >
               <div
-                tabIndex={0}
-                role="button"
-                className="btn btn-ghost btn-circle avatar"
+                className="w-10 rounded-full border-2"
               >
-                <div
-                  onMouseEnter={() => setIsHovering(true)}
-                  onMouseLeave={() => setIsHovering(false)}
-                  className="w-10 rounded-full border-2"
-                >
-                  {user?.photoURL ? (
-                    <img
-                      onMouseEnter={() => setIsHovering(true)}
-                      onMouseLeave={() => setIsHovering(false)}
-                      alt=""
-                      src={user.photoURL}
-                    />
-                  ) : (
-                    <img
-                      onMouseEnter={() => setIsHovering(true)}
-                      onMouseLeave={() => setIsHovering(false)}
-                      alt=""
-                      src={avatar}
-                    />
-                  )}
-                </div>
+                {user?.photoURL ? (
+                  <img
+                    onMouseEnter={() => setIsHovering(true)}
+                    onMouseLeave={() => setIsHovering(false)}
+                    alt=""
+                    src={user.photoURL}
+                  />
+                ) : (
+                  <img
+                    alt=""
+                    src={avatar}
+                  />
+                )}
               </div>
-
-              <ul
-                
-                className="p-2 flex flex-col items-center bg-[#1f6b69] hover:bg-[#1f6b694a] hover:text-[#1f6b69] hover:transition-all text-white hover:bg-[#2f6b7e duration-300 text-center font-bold rounded-lg"
-              >
-                <li className="absolute text-gray-600 top-[40px] right-[33px] w-[150px] ">
-                  {isHovering ? user.displayName : null}
-                </li>
-                <li>
-                  <button className="" onClick={handleLogout}>
-                    Log Out
-                  </button>
-                </li>
-              </ul>
             </div>
-          ) : (
-            <Link
-              to={"/login"}
-              className=" text-lg font-semibold flex items-center gap-2"
+
+            <ul
+
+              className="p-2 flex flex-col items-center bg-[#1f6b69] hover:bg-[#1f6b694a] hover:text-[#1f6b69] hover:transition-all text-white hover:bg-[#2f6b7e duration-300 text-center font-bold rounded-lg"
             >
-              <span>
-                <FiUser color="#153b47" size={25}></FiUser>
-              </span>
-              <span className="px-3 py-1  0.5 bg-slate-50">
-                Login
-              </span>
-            </Link>
-          )}
-        </div>
+              <li className="absolute text-gray-600 top-[45px] right-[30px] w-[150px] ">
+                {isHovering ? user.displayName : null}
+              </li>
+              <li>
+                <button className="" onClick={handleLogout}>
+                  Log Out
+                </button>
+              </li>
+            </ul>
+          </div>
+        ) : (
+          <Link
+            to={"/login"}
+            className=" text-lg font-semibold flex items-center gap-2"
+          >
+            <span>
+              <FiUser color="#153b47" size={25}></FiUser>
+            </span>
+            <span className="px-3 py-1  0.5 bg-slate-50">
+              Login
+            </span>
+          </Link>
+        )}
       </div>
+    </div>
   );
 };
 

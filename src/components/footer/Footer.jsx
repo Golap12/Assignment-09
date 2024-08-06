@@ -7,7 +7,7 @@ const Footer = () => {
     return (
         <footer className="mt-10 divide-y bg-[#1fbfba3b] rounded-t-[70px]">
             <div className=" container px-4 flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
-                <div data-aos="fade-right" data-aos-duration="1000" className="lg:w-1/3">
+                <div data-aos="zoom-in" data-aos-duration="1000" className="lg:w-1/3">
                     <a rel="noopener noreferrer" href="#" className="flex justify-center space-x-3 lg:justify-start">
                         <div className="flex items-center justify-center w-12 h-12 rounded-full bg-[#206b80]">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor" className="flex-shrink-0 w-5 h-5 rounded-full text-gray-900 dark:text-gray-50">

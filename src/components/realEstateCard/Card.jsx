@@ -3,6 +3,7 @@ import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 // ..
 AOS.init();
+import { CiLocationOn } from "react-icons/ci";
 
 import { Link } from "react-router-dom";
 import { MdOutlineBedroomParent } from "react-icons/md";
@@ -12,7 +13,6 @@ import { AwesomeButton } from "react-awesome-button";
 import "react-awesome-button/dist/styles.css";
 
 const Card = ({ card }) => {
-  console.log(card);
   const {
     segment_name,
     location,
@@ -28,7 +28,7 @@ const Card = ({ card }) => {
     <div
       data-aos="zoom-in-down"
       data-aos-duration="1000"
-      className="bg-white flex flex-col shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] rounded-lg p-4"
+      className="bg-white flex flex-col gap-2 shadow-lg rounded-lg md:p-4 p-2"
     >
       <div className="">
         <img className="w-full" src={image} alt="" />
@@ -40,12 +40,15 @@ const Card = ({ card }) => {
           <p className=" font-medium text-yellow-600">Stutus : [{status}]</p>
         </div>
 
-        <h2 className="text-2xl font-bold ">{segment_name}</h2>
-        <p className="text-sm">
-          {location}
-        </p>
+        <div className="flex flex-col gap-2 mb-2 ">
+          <h2 className="text-2xl font-bold ">{segment_name}</h2>
+          <p className="text-sm flex gap-3 justify-start items-center">
+            <span><CiLocationOn color="#1f6b69" size={20}></CiLocationOn></span>
+            <span>{location}</span>
+          </p>
+        </div>
 
-        <div className="flex gap-5 text-sm">
+        <div className="flex gap-5 text-sm ">
           <div>
             <div className="flex gap-2">
               <span className="mb-2">

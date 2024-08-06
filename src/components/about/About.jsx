@@ -12,7 +12,7 @@ const About = () => {
       </Helmet>
       <h1 data-aos="flip-up"
         data-aos-duration="1000" className="text-2xl md:text-4xl font-bold text-center text-[#1f6b69]">About Us</h1>
-      <div className="border w-1/4 mx-auto"></div>
+      <div className="border w-1/4 mx-auto mt-3"></div>
 
 
       <div className="flex flex-col md:flex-row justify-center p-5 mt-10 bg-[#22cbcb29]">
